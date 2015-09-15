@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Simple Memory Address to Decimal C++
-excerpt: "Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more."
 modified: 2015-09-15
 tags: [C++]
 comments: true
