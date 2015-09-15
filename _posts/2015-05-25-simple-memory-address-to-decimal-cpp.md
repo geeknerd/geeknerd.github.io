@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Simple Memory Address to Decimal C++
+date: 2015-05-25
 modified: 2015-09-15
 tags: [C++]
 comments: true
