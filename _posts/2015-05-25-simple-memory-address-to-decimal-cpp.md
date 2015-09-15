@@ -94,9 +94,10 @@ long hex_to_decimal (string s_num){
 {% endhighlight %}
 
 Easier way for hex to decimal: 
-```
+
+{% highlight cpp %}
 stringstream ss;
 ss << p_val_1;
 long add_1;
 ss >> hex >> add_1;
-```
+{% endhighlight %}
