@@ -7,7 +7,7 @@ layout: default
 
 <article class="home">
 
-  <h2>
+  <h4>
  <p class="post-date">
     {% assign d = post.date | date: "%d" | plus:'0' %}
     {{ post.date | date: "%B" }}
@@ -20,7 +20,7 @@ layout: default
     {{ post.date | date: "%Y" }}
   </p>
     <a href="{{ site.BASE_PATH }}{{ post.url }}" style="font-family: ubuntu">{{ post.title }}</a>
-  </h2>
+  </h4>
 
   <div style="font-family: 'Raleway', sans-serif;font-size:large">
     {% if post.fullview %}
