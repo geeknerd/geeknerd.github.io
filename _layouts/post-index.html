@@ -22,6 +22,7 @@ layout: default
     <a href="{{ site.BASE_PATH }}{{ post.url }}" style="font-family: ubuntu">{{ post.title }}</a>
   </h4>
 
+<h3>
   <div style="font-family: 'Raleway', sans-serif;font-size:large">
     {% if post.fullview %}
     {{ post.content }}
@@ -36,8 +37,10 @@ layout: default
     {% endif %}
     <hr class="hr-line1 " style="background-color:#D8D8D8;width:25%;" align="left">
   </div>
+  </h3>
 </article>
 {% endfor %}
+
 <hr/>
 
 <ul class="pager"> 
