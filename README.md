@@ -1,4 +1,5 @@
-[Yi's blog](https://geeknerd.github.io)
+Yi's blog
+[geeknerd.github.io](https://geeknerd.github.io)
 
 =====
 
