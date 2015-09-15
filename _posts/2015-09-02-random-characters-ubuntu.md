@@ -9,7 +9,7 @@ pinned: false
 image: ubuntu.jpg
 ---
 
-After fresh install of Ubuntu 14.04, the default editor `gedit will not show correct encodings for Chinese characters. And the old method does not work anymore in Ubuntu 14.04, or I was missing something from that. Buy anyway, an easy workaround would be to open terminal, enter the following command and restart gedit. Should also work on other encodings. 
+After fresh install of Ubuntu 14.04, the default editor `gedit` will not show correct encodings for Chinese characters. And the old method does not work anymore in Ubuntu 14.04, or I was missing something from that. Buy anyway, an easy workaround would be to open terminal, enter the following command and restart gedit. Should also work on other encodings. 
 
 {% highlight bash %}
 gsettings set org.gnome.gedit.preferences.encodings auto-detected "['GB18030', 'GB2312', 'GBK', 'UTF-8', 'BIG5', 'CURRENT', 'UTF-16']"
