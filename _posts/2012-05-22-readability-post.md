@@ -4,7 +4,7 @@ title: "Testing Readability with a Bunch of Text"
 excerpt: "A ton of text to test readability."
 modified: 2015-09-15
 tags: [test]
-author: leo
+author: 
 comments: true
 ---
 
