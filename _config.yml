@@ -18,6 +18,9 @@ markdown:    kramdown
 highlighter: pygments
 excerpt_separator: <!--more-->
 paginate: 5
+paginate_path: "page/:num"
+
+BASE_PATH : http://geeknerd.github.io
 sass:
   sass_dir: _sass
   style: compressed
