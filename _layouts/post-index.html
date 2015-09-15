@@ -7,7 +7,7 @@ layout: default
 
 <article class="home">
 
-  <h4>
+  <h6>
  <p class="post-date">
     {% assign d = post.date | date: "%d" | plus:'0' %}
     {{ post.date | date: "%B" }}
@@ -19,8 +19,8 @@ layout: default
     {% endcase %}
     {{ post.date | date: "%Y" }}
   </p>
-    <a href="{{ site.BASE_PATH }}{{ post.url }}" style="font-family: ubuntu">{{ post.title }}</a>
-  </h4>
+    <a href="{{ site.url }}{{ post.url }}" style="font-family: ubuntu">{{ post.title }}</a>
+  </h6>
 
 <h3>
   <div style="font-family: 'Raleway', sans-serif;font-size:large">
