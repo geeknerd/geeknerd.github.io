@@ -6,7 +6,7 @@ permalink: /archive/
 
 <div class="timeline" id="timeline">
   {% for post in site.posts %}
-  {% unless post.next %}
+  {% unless post.next and post.category == 'updates' %}
   <div class="archive-title">
     <h4 class="archive-year">{{ post.date | date: '%Y' }}</h4>
   </div>
