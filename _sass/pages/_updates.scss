@@ -1,7 +1,7 @@
 .updates {
   
 
-.timeline {
+#timeline {
   list-style: none;
   border-left: 3px #e5e5d1 solid;
     padding-left: 30px;
@@ -21,11 +21,11 @@
       clear: both;
     }
 }
-.timeline > li {
+#timeline > li {
   margin-bottom: 60px;
 }
 
-  .timeline > li {
+  #timeline > li {
     overflow: hidden;
     margin: 0;
     position: relative;
