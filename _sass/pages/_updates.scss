@@ -23,8 +23,7 @@
     float: left;
     border-left: 3px #e5e5d1 solid;
     padding-left: 30px;
-  }
-  .timeline-content:before {
+    &:before {
     content: '';
     width: 12px;
     height: 12px;
@@ -33,5 +32,11 @@
     left: 106px;
     top: 24px;
     border-radius: 100%;
+    }
+      &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
   }
 }
