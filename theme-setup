@@ -1,9 +1,4 @@
----
-layout: page
-title: Theme Setup
-permalink: /theme-setup/
-comments: true
----
+
 ## Installation
 
 Minimal Mistakes now requires [Jekyll](http://jekyllrb.com/) 2.2+. Make sure to run `gem update jekyll` if you aren't on the latest version or `gem install jekyll` if this is your first time installing it.
