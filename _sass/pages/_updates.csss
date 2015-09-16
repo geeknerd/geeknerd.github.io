@@ -1,4 +1,4 @@
-.archive {
+.updates {
   #timeline {
     position: relative;
     &:before {
@@ -17,10 +17,10 @@
     }
   }
 
-  .archive-title {
+  .updates-title {
     position: relative;
     margin: 2em auto 1em;
-    .archive-year {
+    .updates-year {
       margin-left: 1em;
       &:before {
         content: " ";
