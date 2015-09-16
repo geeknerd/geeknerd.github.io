@@ -4,8 +4,9 @@ layout: default
 
 <br/>
 {% for post in paginator.posts %}
-{% if post.category == "updates" %}
-{% else %}
+
+{% unless post.category == 'updates' %}
+
 <article class="home">
 
   <h6>
@@ -23,7 +24,7 @@ layout: default
   </h6>
   {% include post-section.html %}
 </article>
-{% endif %}
+{% endunless %}
 {% endfor %}
 
 <hr/>
