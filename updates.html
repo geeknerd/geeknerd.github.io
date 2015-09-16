@@ -4,32 +4,33 @@ title:  Updates
 permalink: /updates/
 ---
 
-<ul class="timeline" id="timeline">
+<div class="timeline" id="timeline">
+  {% for post in site.posts %}
+  {% unless post.next %}
   
-  <li>
-  <div class="updates-title">
-    <h4 class="updates-year">2015</h4>
+  <div class="archive-title">
+    <h4 class="archive-year">{{ post.date | date: '%Y' }}</h4>
   </div>
 
   <ul>
-  <li>
-    <span>09-19</span>&nbsp;Test Updates.
-  </li>
-  <li>
-    <span>09-15</span>&nbsp;Started.
-  </li>
+  {% else %}
+    {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+    {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+  {% if year != nyear %}
   </ul>
-  </li>
   
-  <li>
-  <div class="updates-title">
-  <h4 class="updates-year">2014</h4>
+  <div class="archive-title">
+    <h4 class="archive-year">{{ post.date | date: '%Y' }}</h4>
   </div>
 
   <ul>
+  {% endif %}
+  {% endunless %}
   <li>
-    <span>11-02</span>&nbsp;Test Different Years
-  </li>
+    {% if post.category == 'updates' %}
+    <span>{{ post.date | date: "%m-%d" }}</span>&nbsp;<a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
+    {% endif %}
+  {% endfor %}
   </ul>
-  </li>
-</ul>
+
+</div>
