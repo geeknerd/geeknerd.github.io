@@ -1,239 +1,192 @@
-@import compass
+@font-face {
+	font-family: 'ecoico';
+	src:url('../fonts/timelineicons/ecoico.eot');
+	src:url('../fonts/timelineicons/ecoico.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/timelineicons/ecoico.woff') format('woff'),
+		url('../fonts/timelineicons/ecoico.ttf') format('truetype'),
+		url('../fonts/timelineicons/ecoico.svg#ecoico') format('svg');
+	font-weight: normal;
+	font-style: normal;
+} /* Made with http://icomoon.io/ */
 
-/* -------------------------------------
- * For horizontal version, set the
- * $vertical variable to false
- * ------------------------------------- */
-$vertical: true
+.cbp_tmtimeline {
+	margin: 30px 0 0 0;
+	padding: 0;
+	list-style: none;
+	position: relative;
+} 
 
-/* -------------------------------------
- * General Style
- * ------------------------------------- */
+/* The line */
+.cbp_tmtimeline:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 10px;
+	background: #afdcf8;
+	left: 20%;
+	margin-left: -10px;
+}
 
-// Colours
-$bg: #48b379
-$white: #eee9dc
-$red: #f98262
+.cbp_tmtimeline > li {
+	position: relative;
+}
 
-@import url(http://fonts.googleapis.com/css?family=Noto+Sans)
+/* The date/time */
+.cbp_tmtimeline > li .cbp_tmtime {
+	display: block;
+	width: 25%;
+	padding-right: 100px;
+	position: absolute;
+}
 
-body
-  @if $vertical
-    max-width: 1200px
-    margin: 0 auto
-  @else
-    margin: 0
-  padding: 0 5%
-  font-size: 100%
-  font-family: 'Noto Sans', sans-serif
-  color: $white
-  background: $bg
+.cbp_tmtimeline > li .cbp_tmtime span {
+	display: block;
+	text-align: right;
+}
 
-h2
-  margin: 3em 0 0 0
-  font-size: 1.5em
-  letter-spacing: 2px
-  text-transform: uppercase
+.cbp_tmtimeline > li .cbp_tmtime span:first-child {
+	font-size: 0.9em;
+	color: #bdd0db;
+}
 
-/* -------------------------------------
- * timeline
- * ------------------------------------- */
+.cbp_tmtimeline > li .cbp_tmtime span:last-child {
+	font-size: 2.9em;
+	color: #3594cb;
+}
 
-#timeline
-  list-style: none
-  @if $vertical
-    margin: 50px 0 30px 120px
-    padding-left: 30px
-    border-left: 8px solid $white
-  @else
-    margin: 120px 0 0
-    padding: 0
-    border-top: 8px solid $white
-    display: table
-    border-spacing: 30px 0
-  li
-    @if $vertical
-      margin: 40px 0
-      position: relative
-    @else
-      display: table-cell
-      // for Firefox
-      .relative
-        position: relative
-  p
-    margin: 0 0 15px
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime span:last-child {
+	color: #6cbfee;
+}
 
-.date
-  @if $vertical
-    margin-top: -10px
-    top: 50%
-    left: -158px
-  @else
-    text-align: center
-    top: -55px
-    left: 0
-    right: 0
-  font-size: 0.95em
-  line-height: 20px
-  position: absolute
-.circle
-  @if $vertical
-    margin-top: -10px
-    top: 50%
-    left: -44px
-  @else
-    margin: 0 auto
-    top: -14px
-    left: 0
-    right: 0
-  width: 10px
-  height: 10px
-  background: $bg
-  border: 5px solid $white
-  border-radius: 50%
-  display: block
-  position: absolute
+/* Right content */
+.cbp_tmtimeline > li .cbp_tmlabel {
+	margin: 0 0 15px 25%;
+	background: #3594cb;
+	color: #fff;
+	padding: 2em;
+	font-size: 1.2em;
+	font-weight: 300;
+	line-height: 1.4;
+	position: relative;
+	border-radius: 5px;
+}
 
-.content
-  @if $vertical
-    max-height: 20px
-    padding: 50px 20px 0
-    border-color: transparent
-  @else
-    width: 200px
-    max-height: 0
-    margin-top: 40px
-    vertical-align: top
-    padding: 50px 15px 15px
-    transition: width 0.4s linear, max-height 0.4s linear
-  border-width: 2px
-  border-style: solid
-  border-radius: 0.5em
-  position: relative
-  &:before, &:after
-    content: ""
-    width: 0
-    height: 0
-    border: solid transparent
-    position: absolute
-    pointer-events: none
-    @if $vertical
-      right: 100%
-    @else
-      bottom: 100%
-  &:before
-    @if $vertical
-      border-right-color: inherit
-      border-width: 20px
-      top: 50%
-      margin-top: -20px
-    @else
-      border-bottom-color: inherit
-      border-width: 15px
-      left: 50%
-      margin-left: -15px
-  &:after
-    @if $vertical
-      border-right-color: $bg
-      border-width: 17px
-      top: 50%
-      margin-top: -17px
-    @else
-      border-bottom-color: $bg
-      border-width: 12px
-      left: 50%
-      margin-left: -12px
-  p
-    max-height: 0
-    color: transparent
-    text-align: justify
-    word-break: break-word
-    hyphens: auto
-    overflow: hidden
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
+	background: #6cbfee;
+}
 
-label
-  font-size: 1.3em
-  position: absolute
-  z-index: 100
-  cursor: pointer
-  @if $vertical
-    top: 20px
-    transition: transform 0.2s linear
-  @else
-    width: 200px
-    white-space: nowrap
-    text-overflow: ellipsis
-    overflow: hidden
-    display: block
-    top: 60px
-    left: 15px
+.cbp_tmtimeline > li .cbp_tmlabel h2 { 
+	margin-top: 0px;
+	padding: 0 0 10px 0;
+	border-bottom: 1px solid rgba(255,255,255,0.4);
+}
 
-.radio
-  display: none
-.radio:checked
-  & + .relative
-    label
-      cursor: auto
-      @if $vertical
-        transform: translateX(42px)
-      @else
-        width: 400px
-        transition: width 0.3s linear 0.2s
-    .circle
-      background: $red
-  & ~ .content
-    max-height: 180px
-    border-color: $white
-    @if $vertical
-      margin-right: 20px
-      transform: translateX(20px)
-      transition: max-height 0.4s linear, border-color 0.5s linear, transform 0.2s linear
-    @else
-      width: 400px
-    p
-      max-height: 200px
-      color: $white
-      transition: color 0.3s linear 0.3s
+/* The triangle */
+.cbp_tmtimeline > li .cbp_tmlabel:after {
+	right: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-right-color: #3594cb;
+	border-width: 10px;
+	top: 10px;
+}
 
-/* -------------------------------------
- * mobile phones (vertical version only)
- * ------------------------------------- */
-@if $vertical
-  @media screen and (max-width: 767px)
-    #timeline
-      margin-left: 0
-      padding-left: 0
-      border-left: none
-      li
-        margin: 50px 0
-    label
-      width: 85%
-      font-size: 1.1em
-      white-space: nowrap
-      text-overflow: ellipsis
-      overflow: hidden
-      display: block
-      transform: translateX(18px)
-    .content
-      padding-top: 45px
-      border-color: $white
-      &:before, &:after
-        border: solid transparent
-        bottom: 100%
-      &:before
-        border-bottom-color: inherit
-        border-width: 17px
-        top: -16px
-        left: 50px
-        margin-left: -17px
-      &:after
-        border-bottom-color: $bg
-        border-width: 20px
-        top: -20px
-        left: 50px
-        margin-left: -20px
-      p
-        font-size: 0.9em
-        line-height: 1.4
-    .circle, .date
-      display: none
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
+	border-right-color: #6cbfee;
+}
+
+/* The icons */
+.cbp_tmtimeline > li .cbp_tmicon {
+	width: 40px;
+	height: 40px;
+	font-family: 'ecoico';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	font-size: 1.4em;
+	line-height: 40px;
+	-webkit-font-smoothing: antialiased;
+	position: absolute;
+	color: #fff;
+	background: #46a4da;
+	border-radius: 50%;
+	box-shadow: 0 0 0 8px #afdcf8;
+	text-align: center;
+	left: 20%;
+	top: 0;
+	margin: 0 0 0 -25px;
+}
+
+.cbp_tmicon-phone:before {
+	content: "\e000";
+}
+
+.cbp_tmicon-screen:before {
+	content: "\e001";
+}
+
+.cbp_tmicon-mail:before {
+	content: "\e002";
+}
+
+.cbp_tmicon-earth:before {
+	content: "\e003";
+}
+
+/* Example Media Queries */
+@media screen and (max-width: 65.375em) {
+
+	.cbp_tmtimeline > li .cbp_tmtime span:last-child {
+		font-size: 1.5em;
+	}
+}
+
+@media screen and (max-width: 47.2em) {
+	.cbp_tmtimeline:before {
+		display: none;
+	}
+
+	.cbp_tmtimeline > li .cbp_tmtime {
+		width: 100%;
+		position: relative;
+		padding: 0 0 20px 0;
+	}
+
+	.cbp_tmtimeline > li .cbp_tmtime span {
+		text-align: left;
+	}
+
+	.cbp_tmtimeline > li .cbp_tmlabel {
+		margin: 0 0 30px 0;
+		padding: 1em;
+		font-weight: 400;
+		font-size: 95%;
+	}
+
+	.cbp_tmtimeline > li .cbp_tmlabel:after {
+		right: auto;
+		left: 20px;
+		border-right-color: transparent;
+		border-bottom-color: #3594cb;
+		top: -20px;
+	}
+
+	.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
+		border-right-color: transparent;
+		border-bottom-color: #6cbfee;
+	}
+
+	.cbp_tmtimeline > li .cbp_tmicon {
+		position: relative;
+		float: right;
+		left: auto;
+		margin: -55px 5px 0 0px;
+	}	
+}
