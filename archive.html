@@ -28,9 +28,7 @@ permalink: /archive/
   {% endunless %}
   
   <li>
-    {% unless post.category == 'updates' %}
     <span>{{ post.date | date: "%m-%d" }}</span>&nbsp;<a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
-    {% endunless %}
   {% endfor %}
   </ul>
 
