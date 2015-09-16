@@ -5,8 +5,6 @@
   margin-bottom: 60px;
 }
 
-/* for Desktop */
-@media ( min-width : 640px ){
   .timeline > li {
     overflow: hidden;
     margin: 0;
@@ -33,4 +31,3 @@
     top: 24px;
     border-radius: 100%;
   }
-}
