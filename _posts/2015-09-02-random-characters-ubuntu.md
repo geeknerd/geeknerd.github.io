@@ -19,3 +19,8 @@ gsettings set org.gnome.gedit.preferences.encodings auto-detected "['GB18030', '
 gsettings set org.gnome.gedit.preferences.encodings shown-in-menu "['GB18030', 'GB2312', 'GBK', 'UTF-8', 'BIG5', 'CURRENT', 'UTF-16']"
 {% endhighlight %}
 
+To add encoding support to vim, which is one of the finest text editors you will be using in linux, add the following two lines to your `.vimrc` file. If you don't have one, create one at home directory should suffice. 
+{% highlight bash %}
+set fileencodings=utf-8,gb2312,gbk,gb18030,big5
+set termencoding=utf-8,gb2312,gbk,gb18030
+{% endhighlight %}
