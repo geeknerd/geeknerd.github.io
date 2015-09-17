@@ -1,6 +1,6 @@
-.timeline {
-  list-style: none;
-  position: relative;
+.updates {
+  #timeline {
+    position: relative;
     &:before {
       content: '';
       position: absolute;
@@ -15,35 +15,12 @@
       display: table;
       clear: both;
     }
-}
-.timeline > li {
-  margin: 1em auto;
-}
-
-ul {
-    list-style: none;
-    li {
-      margin: 1em auto;
-    }
   }
 
-/* for Desktop */
-@media ( min-width : 640px ){
-  .timeline > li {
-    overflow: hidden;
-    margin: 0;
+  .updates-title {
     position: relative;
-  }
-  .timeline-date {
-    width: 110px;
-    float: left;
-    margin-top: 20px;
-  }
- 
-  .timeline-content {
-   position: relative;
     margin: 2em auto 1em;
-    .content-year {
+    .updates-year {
       margin-left: 1em;
       &:before {
         content: " ";
@@ -57,6 +34,14 @@ ul {
         background: #bbb;
         border-radius: 50%;
       }
+    }
+  }
+
+
+  ul {
+    list-style: none;
+    li {
+      margin: 1em auto;
     }
   }
 }
