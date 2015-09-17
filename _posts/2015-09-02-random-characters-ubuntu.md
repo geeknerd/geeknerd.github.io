@@ -5,9 +5,7 @@ date: 2015-09-02
 modified: 2015-09-15
 tags: [Linux]
 comments: true
-pinned: false
-image: ubuntu.jpg
-imageW: 200
+pinned: true
 
 ---
 
