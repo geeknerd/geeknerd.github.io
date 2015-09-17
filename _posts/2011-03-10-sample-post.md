@@ -98,3 +98,9 @@ Make any link standout more when applying the `.btn` class.
 
 **Watch out!** You can also add notices by appending `{: .notice}` to a paragraph.
 {: .notice}
+
+This theme supports **link posts**, made famous by John Gruber. To use, just add `link: http://url-you-want-linked` to the post's YAML front matter and you're done.
+
+> And this is how a quote looks.
+
+Some [link](http://www.mademistakes.com) can also be shown.
