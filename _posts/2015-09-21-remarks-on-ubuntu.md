@@ -8,11 +8,11 @@ pinned: true
 ---
 
 Click on icon to minimize an app/window does not come with Ubuntu 14.04.03, to enable the feature either one can use compizconfig settings manager to set it from Unity Plugin or use the following command:
-{% highligh bash %}
+{% highlight bash %}
 gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ launcher-minimize-window true
 {% endhighlight %}
 
 To revert the change:
-{% highligh bash %}
+{% highlight bash %}
 gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ launcher-minimize-window false
 {% endhighlight %}
