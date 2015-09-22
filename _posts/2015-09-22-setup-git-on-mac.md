@@ -9,7 +9,7 @@ tags: [Mac OS X,git]
 
 1. First, you need to download the latest version of Git from [here](http://git-scm.com/downloads).
 2. Then you need to configure your global name and email address through the following commands, using Terminal or similar apps of your choice.
-
+<!-- sfs -->
    {% highlight bash %} 
    $ git config --global user.name "YOUR NAME"
    $ git config --global user.email "YOUR EMAIL ADDRESS"
