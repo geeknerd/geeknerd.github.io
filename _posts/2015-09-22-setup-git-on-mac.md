@@ -10,7 +10,7 @@ tags: [Mac OS X,git]
 1. First, you need to download the latest version of Git from [here](http://git-scm.com/downloads).
 + Then you need to configure your global name and email address through the following commands, using Terminal or similar apps of your choice.
 
-{% highlight bash%} 
+{% highlight bash %} 
 $ git config --global user.name "YOUR NAME"
 $ git config --global user.email "YOUR EMAIL ADDRESS"
 {% endhighlight %}
@@ -18,7 +18,7 @@ $ git config --global user.email "YOUR EMAIL ADDRESS"
 + Recommended workaround if cloning with HTTPS, so you could cache your GitHub password using a credential helper. 
 	* Check if the ```osxkeychina credential helper``` is installed by running:
 
-{% highlight bash%} 
+{% highlight bash %} 
 $ git credential-osxkeychain
 # Test for the cred helper
 # Usage: git credential-osxkeychain <get|store|erase>
@@ -26,7 +26,7 @@ $ git credential-osxkeychain
 
 	* If it isn't installed, download and install it. 
 
-{% highlight bash%} 
+{% highlight bash %} 
 $ git credential-osxkeychain
 # Test for the cred helper
 # git: 'credential-osxkeychain' is not a git command. See 'git --help'.
@@ -39,7 +39,7 @@ $ chmod u+x git-credential-osxkeychain
 
 And you need to move it to the same directory with Git.
 
-{% highlight bash%} 
+{% highlight bash %} 
 $ sudo mv git-credential-osxkeychain \
 "$(dirname $(which git))/git-credential-osxkeychain"
 # Move the helper to the path where git is installed
@@ -55,7 +55,7 @@ $ git config --global credential.helper osxkeychain
 
 + At any point you want to remove the credential or modify it, open ```Keychain Access``` on your Mac, search for ```github.com```, the *Internet Password* is the entry you're looking for. Or you could use the command to erase it:
 + 
-{% highlight bash%} 
+{% highlight bash %} 
 $ git credential-osxkeychain erase
 host=github.com
 protocol=https
