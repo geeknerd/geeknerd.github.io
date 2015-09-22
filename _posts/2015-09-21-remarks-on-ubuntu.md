@@ -9,7 +9,7 @@ pinned: true
 
 <<<<<<< HEAD
 Click on icon to minimize an app/window does not come with Ubuntu 14.04.03, to enable the feature either one can use [compizconfig settings manager][1] to set it from Unity Plugin or use the following command:
-{% highligh bash %}
+{% highlight bash %}
 =======
 Click on icon to minimize an app/window does not come with Ubuntu 14.04.03, to enable the feature either one can use compizconfig settings manager to set it from Unity Plugin or use the following command:
 {% highlight bash %}
