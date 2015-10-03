@@ -9,17 +9,17 @@ tags: [Mac OS X,git]
 
 1. First, you need to download the latest version of Git from [here](http://git-scm.com/downloads).
 2. Then you need to configure your global name and email address through the following commands, using Terminal or similar apps of your choice.
-    ~~~ bash 
+    ``` shell 
     $ git config --global user.name "YOUR NAME"
     $ git config --global user.email "YOUR EMAIL ADDRESS"
-    ~~~
+    ```
 3. Recommended workaround if cloning with HTTPS, so you could cache your GitHub password using a credential helper.
     * Check if the ```osxkeychina credential helper``` is installed by running:
-        ~~~ bash
+        ``` shell
         $ git credential-osxkeychain
         # Test for the cred helper
         # Usage: git credential-osxkeychain <get|store|erase>
-        ~~~
+        ```
     * If it isn't installed, download and install it. 
         ~~~ bash 
         $ git credential-osxkeychain
