@@ -8,6 +8,7 @@ tags: [Mac OS X,git]
 ---
 
 ```1.``` First, you need to download the latest version of Git from [here](http://git-scm.com/downloads).
+
 ```2.``` Then you need to configure your global name and email address through the following commands, using Terminal or similar apps of your choice.
 {% highlight bash %} 
 $ git config --global user.name "YOUR NAME"
@@ -20,7 +21,10 @@ $ git credential-osxkeychain
 # Test for the cred helper
 # Usage: git credential-osxkeychain <get|store|erase>
 {% endhighlight %}
+<p>
+
     -- If it isn't installed, download and install it. 
+
 {% highlight bash %} 
 $ git credential-osxkeychain
 # Test for the cred helper
@@ -31,14 +35,18 @@ https://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain
 $ chmod u+x git-credential-osxkeychain
 # Fix the permissions on the file so it can be run
 {% endhighlight %}
+
     -- And you need to move it to the same directory with Git.
+
 {% highlight bash %} 
 $ sudo mv git-credential-osxkeychain \
 "$(dirname $(which git))/git-credential-osxkeychain"
 # Move the helper to the path where git is installed
 # Password: [enter your password]
 {% endhighlight %}
+
     -- Configure the ```osxkeychain```
+
 {% highlight bash%} 
 $ git config --global credential.helper osxkeychain
 # Set git to use the osxkeychain credential helper
