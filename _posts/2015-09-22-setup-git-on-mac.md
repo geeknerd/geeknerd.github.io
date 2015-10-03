@@ -14,8 +14,11 @@ tags: [Mac OS X,git]
 $ git config --global user.name "YOUR NAME"
 $ git config --global user.email "YOUR EMAIL ADDRESS"
 {% endhighlight %}
-```3``` Recommended workaround if cloning with HTTPS, so you could cache your GitHub password using a credential helper.
+
+```3.``` Recommended workaround if cloning with HTTPS, so you could cache your GitHub password using a credential helper.
+
     -- Check if the ```osxkeychina credential helper``` is installed by running:
+    
 {% highlight bash %} 
 $ git credential-osxkeychain
 # Test for the cred helper
@@ -51,6 +54,7 @@ $ sudo mv git-credential-osxkeychain \
 $ git config --global credential.helper osxkeychain
 # Set git to use the osxkeychain credential helper
 {% endhighlight %}
+
 ```4.``` At any point you want to remove the credential or modify it, open ```Keychain Access``` on your Mac, search for ```github.com```, the *Internet Password* is the entry you're looking for. Or you could use the command to erase it:
 {% highlight bash %} 
 $ git credential-osxkeychain erase
