@@ -17,7 +17,7 @@ $ git config --global user.email "YOUR EMAIL ADDRESS"
 
 ```3.``` Recommended workaround if cloning with HTTPS, so you could cache your GitHub password using a credential helper.
 
-    -- Check if the ```osxkeychina credential helper``` is installed by running:
+-* Check if the ```osxkeychina credential helper``` is installed by running:
     
 {% highlight bash %} 
 $ git credential-osxkeychain
@@ -25,7 +25,7 @@ $ git credential-osxkeychain
 # Usage: git credential-osxkeychain <get|store|erase>
 {% endhighlight %}
 
-    -- If it isn't installed, download and install it. 
+-* If it isn't installed, download and install it. 
 
 {% highlight bash %} 
 $ git credential-osxkeychain
@@ -38,7 +38,7 @@ $ chmod u+x git-credential-osxkeychain
 # Fix the permissions on the file so it can be run
 {% endhighlight %}
 
-    -- And you need to move it to the same directory with Git.
+-* And you need to move it to the same directory with Git.
 
 {% highlight bash %} 
 $ sudo mv git-credential-osxkeychain \
@@ -47,7 +47,7 @@ $ sudo mv git-credential-osxkeychain \
 # Password: [enter your password]
 {% endhighlight %}
 
-    -- Configure the ```osxkeychain```
+-* Configure the ```osxkeychain```
 
 {% highlight bash%} 
 $ git config --global credential.helper osxkeychain
