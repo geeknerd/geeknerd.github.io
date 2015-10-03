@@ -54,7 +54,7 @@ $ sudo mv git-credential-osxkeychain \
 $ git config --global credential.helper osxkeychain
 # Set git to use the osxkeychain credential helper
 {% endhighlight %}
-
+<!-- -->
 ```4.``` At any point you want to remove the credential or modify it, open ```Keychain Access``` on your Mac, search for ```github.com```, the *Internet Password* is the entry you're looking for. Or you could use the command to erase it:
 {% highlight bash %} 
 $ git credential-osxkeychain erase
