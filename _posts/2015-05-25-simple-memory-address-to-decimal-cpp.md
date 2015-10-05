@@ -11,7 +11,7 @@ image:
 
 This program compares the memory addresses of two different variables on the stack and prints out the order of their addresses in decimal.
 
-{% highlight cpp linenos %}
+{% highlight cpp linenos=table %}
 // Comment
 //
 //  pointer_practice.cpp
