@@ -18,7 +18,7 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ls='ls -GFh'
 {% endhighlight %}
-That should at least give you some colorful ```ls``` results. However, it doesn't give you the full power of controlling the colors in your Terminal and we all know that programmers want to take over everything as they can. So, a great GNU tool comes to the stage: [```GNU Coreutils```](http://www.gnu.org/software/coreutils/coreutils.html). Coreutils gives you the flexibility of controlling the colors but also other manipuation utilities you need from a GNU os. 
+That should at least give you some colorful ```ls``` results. However, it doesn't give you the full power of controlling the colors in your Terminal and we all know that programmers want to take over everything as they can. So, a great GNU tool comes to the stage: [GNU Coreutils](http://www.gnu.org/software/coreutils/coreutils.html). Coreutils gives you the flexibility of controlling the colors but also other manipuation utilities you need from a GNU os. 
 To get Coreutils, the easiest way is through ```Homebrew```:
 {% highlight bash %}
 brew install xz coreutils
