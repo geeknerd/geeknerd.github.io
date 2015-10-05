@@ -26,7 +26,7 @@ $ git credential-osxkeychain
 # Usage: git credential-osxkeychain <get|store|erase>
 {% endhighlight %}
 
--* If it isn't installed, download and install it. 
+If it isn't installed, download and install it. 
 {: .textbox}
 
 {% highlight bash %} 
@@ -40,8 +40,8 @@ $ chmod u+x git-credential-osxkeychain
 # Fix the permissions on the file so it can be run
 {% endhighlight %}
 
--* And you need to move it to the same directory with Git.
-{: .notice}
+And you need to move it to the same directory with Git.
+{: .textbox}
 
 {% highlight bash %} 
 $ sudo mv git-credential-osxkeychain \
@@ -50,8 +50,8 @@ $ sudo mv git-credential-osxkeychain \
 # Password: [enter your password]
 {% endhighlight %}
 
--* Configure the ```osxkeychain```
-{: .notice}
+Configure the ```osxkeychain```
+{: .textbox}
 
 {% highlight bash%} 
 $ git config --global credential.helper osxkeychain
