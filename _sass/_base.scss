@@ -16,6 +16,10 @@ p {
   text-align: center;
 }
 
+.left {
+  text-align: left;
+}
+
 .textbox {
   border: 2px solid lighten($text-color, 30%);
   padding: .5em 1em;
