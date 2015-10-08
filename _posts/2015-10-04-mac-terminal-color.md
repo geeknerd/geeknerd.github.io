@@ -10,7 +10,7 @@ tags: [Mac OS X]
 One of the most powerful tools on a Mac system would be the Terminal (or the trackpad as somebody insists). While most users won't even touch the Terminal on a daily basis, it stills has its value to most programmers or SE's or whoever wants to mess around with GNU. Among the Terminal users, part of them use the default settings that come with the system for Terminal, others would like to add their own colors to the app, to the latter I consider myself belong to. 
 Now, to customize the colors in Terminal, essentially I'm assuming you want to see colorful ```ls``` and intuitive ```Vim```. And I also assume you're not planning on a customized background for your Terminal, which should somewhat look like this:
 ![Customized Background]({{size.url}}/img/terminal-theme-mac-os-x.jpg )
-{: style="text-align: left, height=100px, width=100px"}
+
 
 One simplest way to colorize Terminal would be using the ```-G``` argument that comes with ```ls```. To accomplish this, one could open up ```.bash_profile``` and add the following to it:
 {% highlight bash %}
