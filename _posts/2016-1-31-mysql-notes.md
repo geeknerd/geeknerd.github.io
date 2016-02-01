@@ -12,11 +12,5 @@ To use a case sensitive wildcard in a ```SELECT``` query, it is simpler to use B
 {% highlight MySQL %}
 SELECT prod_name, prod_price, prod_id FROM products WHERE BINARY prod_name LIKE '%anvil%';
 {% endhighlight %}
-The result is:<br>
-+--------------+------------+---------+<br>
-| prod_name    | prod_price | prod_id |<br>
-+--------------+------------+---------+<br>
-| .5 ton anvil |       5.99 | ANV01   |<br>
-| 1 ton anvil  |       9.99 | ANV02   |<br>
-| 2 ton anvil  |      14.99 | ANV03   |<br>
-+--------------+------------+---------+<br>
+The result is:
+![MySQL CS]({{site.url}}/img/mysql-cs.png)
