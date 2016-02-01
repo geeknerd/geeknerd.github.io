@@ -1,7 +1,7 @@
 ---
 layout: post
 title: MySQL Syntax Notes
-date: 2016-01-13
+date: 2016-01-31
 comments: true
 pinned: true
 tags: [MySQL]
