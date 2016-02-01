@@ -23,3 +23,4 @@ It is important to note that, in addition to matching one or more characters, ``
 WHERE prod_name REGEXP BINARY 'JetPack .000';
 {% endhighlight %}
 
+```^``` will negate everything in the ```[]```. Therefore, ```[^123]``` will match characters other than 1 and 2 and 3. 
