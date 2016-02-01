@@ -23,4 +23,16 @@ It is important to note that, in addition to matching one or more characters, ``
 WHERE prod_name REGEXP BINARY 'JetPack .000';
 {% endhighlight %}
 
-```^``` will negate everything in the ```[]```. Therefore, ```[^123]``` will match characters other than 1 and 2 and 3. 
+```^``` will negate everything in the ```[]```. Therefore, ```[^123]``` will match characters other than 1 and 2 and 3. Same as ```[^1-3]```.
+
+Omitting ```FROM``` clause after ```SELECT``` simply tests the function and calculation. 
+
+**SOUNDEX** matches patterns that sound similar to the specified value, like the following:
+
+{% highlight MySQL %}
+SELECT cust_name, cust_contact
+FROM customers
+WHERE Soundex(cust_contact) = Soundex('Y Lie');
+{% endhighlight %}	
+
+![MySQL SoundEX]({{site.url}}/img/mysql-sex.png)
