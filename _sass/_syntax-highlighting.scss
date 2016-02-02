@@ -25,6 +25,17 @@ pre { // only apply for code blocks
   word-wrap: break-word;
   border-radius: 5px;
   font-weight: 600;
+  span {
+	&:before {
+	      counter-increment: line;
+	      content: counter(line);
+	      display: inline-block;
+	      border-right: 1px solid #ddd;
+	      padding: 0 .5em;
+	      margin-right: .5em;
+	      color: #888
+	    }
+  }
 }
 
 pre code {
@@ -35,15 +46,7 @@ pre code {
   color: #525252;
   span {
     word-break: break-all;
-	&:before {
-	      counter-increment: line;
-	      content: counter(line);
-	      display: inline-block;
-	      border-right: 1px solid #ddd;
-	      padding: 0 .5em;
-	      margin-right: .5em;
-	      color: #888
-	    }
+	
   }
 }
 .highlight {
