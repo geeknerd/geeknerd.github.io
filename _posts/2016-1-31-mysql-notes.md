@@ -16,6 +16,7 @@ SELECT prod_name, prod_price, prod_id FROM products
 WHERE prod_name LIKE BINARY'%Anvil%'
 ORDER BY prod_name;
 ~~~
+
 The result is:
 
 ![MySQL CS]({{site.url}}/img/mysql-cs.png)
@@ -23,6 +24,7 @@ The result is:
 * It is important to note that, in addition to matching one or more characters, ```%``` also matches zero characters. ```%``` represents zero, one, or more characters at the specified location in the search pattern.
 
 * ```BINARY``` works the same in a regular expression match. Like:
+
 ~~~ sql
 WHERE prod_name REGEXP BINARY 'JetPack .000';
 ~~~
@@ -46,11 +48,13 @@ WHERE Soundex(cust_contact) = Soundex('Y Lie');
 Use ```BINARY``` mode for case sensitive search. 
 
 Syntax is as: 
+
 ~~~ sql
 SELECT note_text FROM productnotes WHERE Match(note_text) Against('rabbit');
 ~~~
 
 * Use ```WITH QUERY EXPANSION``` to full-text search for related rows based on first search for the keyword. 
+* 
 ~~~ sql
 SELECT note_text 
 FROM productnotes 
