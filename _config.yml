@@ -14,32 +14,38 @@ url: http://geeknerd.github.io # the base hostname & protocol for your site
 # Jekyll configuration
 ####################################
 #
-timezone:          America/Chicago
-markdown:          kramdown
-highlighter:       rouge
+markdown:    kramdown
+highlighter: rouge
 excerpt_separator: <!--more-->
-permalink:         /articles/:year-:month/:title
+paginate: 5
+paginate_path: "page/:num"
+
+BASE_PATH : http://geeknerd.github.io
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
 
 kramdown:
-  auto_ids:       true
-  footnote_nr:    1
-  entity_output:  as_char
-  toc_levels:     1..6
-  enable_coderay: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
 
 #
 ###################################
-# Site Owner configuration
+# Jekyll configuration
 ####################################
 #
 owner:
   name: Yi Xia
   avatar: avatar.jpg
-  job: 
-  bio: "Too young, too simple, sometimes naive."
+  bio: Too young, too simple, sometimes naive.
   email: yxia921@gmail.com
   disqus-shortname: geeknerd
-  twitter:  #username
+  twitter: #username
   facebook: bao571 #username
   google:
     plus: YiXia571 #username
@@ -64,3 +70,6 @@ owner:
   weibo: geeknerdlab #username
   flickr: #username
   codepen: #username
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]

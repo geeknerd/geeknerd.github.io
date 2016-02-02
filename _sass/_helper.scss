@@ -1,17 +1,24 @@
-/**
-  * Helpers
-  */
+/*
+ * Variables
+ */
+$base-space-unit: 1.5em;
+
+/*
+ * Helpers
+ */
+.full-min-height { min-height: 74% }
+
+.ell { overflow: hidden }
+.clear { clear: both }
+
+.glassy-bg { background-color: rgba(0, 0, 0, 0.2) }
+.primary-bg { background-color: #2A2B30}
+
 
 // Displays
 .block { display: block }
 .inline-block { display: inline-block }
 
-.hidden-md {
-  display: none;
-  @include media-query($medium-screen) {
-    display: inline-block;
-  }
-}
 
 .radius-box {
   border-radius: 10px;
@@ -98,7 +105,6 @@
 .pl2           { padding-left: 1em*2 }
 
 .pb5           { padding-bottom: 1em*5 }
-
 // Padding small
 .pads           { padding: .25em }
 
@@ -144,7 +150,7 @@
  padding-bottom: 1em;
 }
 
-// Colors helpers
+// colors helpers
 .primary-text-color {
   color: $primary;
 }
