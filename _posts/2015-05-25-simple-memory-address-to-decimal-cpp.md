@@ -11,7 +11,7 @@ image:
 
 This program compares the memory addresses of two different variables on the stack and prints out the order of their addresses in decimal.
 
-{% highlight cpp lineno %}
+~~~ cpp
 // Comment
 // EXPECTING CHANGES
 //
@@ -93,13 +93,12 @@ long hex_to_decimal (string s_num){
     }
     return d_num;
 }
-{% endhighlight %}
-
+~~~
 Easier way for hex to decimal: 
 
-{% highlight cpp %}
+~~~ cpp
 stringstream ss;
 ss << p_val_1;
 long add_1;
 ss >> hex >> add_1;
-{% endhighlight %}
+~~~
