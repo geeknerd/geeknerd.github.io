@@ -10,26 +10,25 @@ pre, code {
 }
 code {
   color: #ec84e7;  //color for inline codes
-  padding: 3px 5px;
-  margin: 0 2px;
   word-break: break-all;
-  white-space: nowrap;
+  white-space: pre;
   border-radius: 2px;
   font-weight: 600;
 }
 pre { // only apply for code blocks
   overflow: auto;
   display: block;
-  margin: 0 0 1em;
+  margin: 0 0;
   padding: 1em;
   line-height: $base-line-height * 0.925;
   word-break: break-all;
   word-wrap: break-word;
-  border-radius: 0;
+  border-radius: 1px;
   font-weight: 600;
 }
 pre code {
   background: transparent;
+  white-space: pre;
   overflow: auto;
   word-wrap: normal;
   color: #525252;
@@ -42,6 +41,7 @@ pre code {
     color: #525252;
     word-wrap: normal;
     display: block; 
+    white-space: pre; 
     overflow-x: auto;
   }
 .hll { background-color: #ffffcc }
