@@ -129,7 +129,7 @@ pre a::before {
   text-align: right;
   opacity: 0.7;
   display: inline-block;
-  color: #aaa;
+  color: #ccc;
   background: #eee;
   margin-right: 16px;
   padding: 2px 10px;
@@ -140,16 +140,4 @@ pre a::before {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-pre a:first-of-type::before {
-  padding-top: 10px;
-}
-
-pre a:last-of-type::before {
-  padding-bottom: 10px;
-}
-
-pre a:only-of-type::before {
-  padding: 10px;
 }
