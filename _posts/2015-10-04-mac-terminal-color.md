@@ -14,6 +14,14 @@ Now, to customize the colors in Terminal, essentially I'm assuming you want to s
 
 One simplest way to colorize Terminal would be using the ```-G``` argument that comes with ```ls```. To accomplish this, one could open up ```.bash_profile``` and add the following to it:
 
+I am testing the highlighting!!!!!
+```java
+	public static void main(String[] args){
+		Test test = new Test();
+		test.start();
+		return 0;
+	}
+```
 ```shell
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
