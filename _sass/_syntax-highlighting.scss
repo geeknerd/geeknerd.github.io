@@ -111,7 +111,7 @@ pre code {
 }
 
 
-pre code::before {
+pre ::before {
   content: counter(line-numbering);
   counter-increment: line-numbering;
   padding-right: 1em; /* space after numbers */
@@ -132,14 +132,14 @@ pre code::before {
   user-select: none;
 }
 
-pre code:first-of-type::before {
+pre :first-of-type::before {
   padding-top: 10px;
 }
 
-pre code:last-of-type::before {
+pre :last-of-type::before {
   padding-bottom: 10px;
 }
 
-pre code:only-of-type::before {
+pre :only-of-type::before {
   padding: 10px;
 }
