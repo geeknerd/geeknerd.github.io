@@ -57,6 +57,15 @@ pre code {
     white-space: pre; 
     overflow-x: auto;
   }
+  pre code::before {
+  	      counter-increment: line;
+  	      content: counter(line);
+  	      display: inline-block;
+  	      border-right: 1px solid #ddd;
+  	      padding: 0 .5em;
+  	      margin-right: .5em;
+  	      color: #888
+  	    }
 .hll { background-color: #ffffcc }
   .c { color: #B0B2B0; font-style: italic } /* Comment */
   .err {  } /* Error */
