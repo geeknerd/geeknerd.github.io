@@ -11,14 +11,14 @@ pre, code {
 code {
   color: #ec84e7;  //color for inline codes
   word-break: break-all;
-  white-space: pre;
+  white-space: normal;
   border-radius: 2px;
   font-weight: 600;
 }
 pre { // only apply for code blocks
   overflow: auto;
   display: block;
-  margin: 0 0;
+  margin: 10px 10px 10px 10px;
   padding: 1em;
   line-height: $base-line-height * 0.925;
   word-break: break-all;
