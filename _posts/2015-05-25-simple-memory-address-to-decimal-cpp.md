@@ -13,6 +13,7 @@ This program compares the memory addresses of two different variables on the sta
 
 {% highlight cpp lineno %}
 // Comment
+// EXPECTING CHANGES
 //
 //  pointer_practice.cpp
 //  Hello Pointer
