@@ -14,6 +14,7 @@ code {
   white-space: normal;
   border-radius: 0;
 }
+/*
 pre { // only apply for code blocks
   overflow: auto;
   display: block;
@@ -26,6 +27,7 @@ pre { // only apply for code blocks
   border-radius: 0;
   font-weight: bold;
 }
+*/
 pre code {
   background: transparent;
   white-space: pre;
