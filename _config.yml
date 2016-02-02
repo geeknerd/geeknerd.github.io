@@ -16,8 +16,6 @@ url: http://geeknerd.github.io # the base hostname & protocol for your site
 #
 markdown:    kramdown
 highlighter: pygments
-pygments: true
-pygments_options: ['lineanchors', 'linenos=table']
 excerpt_separator: <!--more-->
 paginate: 5
 paginate_path: "page/:num"
