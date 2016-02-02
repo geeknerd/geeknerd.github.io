@@ -23,9 +23,10 @@ The result is:
 * It is important to note that, in addition to matching one or more characters, ```%``` also matches zero characters. ```%``` represents zero, one, or more characters at the specified location in the search pattern.
 
 * ```BINARY``` works the same in a regular expression match. Like:
-{% highlight sql %}
+
+```sql
 WHERE prod_name REGEXP BINARY 'JetPack .000';
-{% endhighlight %}
+```
 
 * ```^``` will negate everything in the ```[]```. Therefore, ```[^123]``` will match characters other than 1 and 2 and 3. Same as ```[^1-3]```.
 
