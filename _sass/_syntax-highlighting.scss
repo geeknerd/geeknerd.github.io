@@ -30,7 +30,6 @@ pre { // only apply for code blocks
 }
 pre code {
   background: transparent;
-  white-space: pre;
   overflow: auto;
   word-wrap: normal;
   color: #525252;
@@ -43,7 +42,6 @@ pre code {
     color: #525252;
     word-wrap: normal;
     display: block; 
-    white-space: pre; 
     overflow-x: auto;
   }
 .hll { background-color: #ffffcc }
