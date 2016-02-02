@@ -26,7 +26,7 @@ pre { // only apply for code blocks
   border-radius: 5px;
   font-weight: 600;
   }
-pre::before {
+pre code::before {
 	      counter-increment: line;
 	      content: counter(line);
 	      display: inline-block;
