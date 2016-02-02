@@ -41,6 +41,10 @@ pre code {
 .highlight {
   pre code {
     color: #525252;
+    word-wrap: normal;
+    display: block; 
+    white-space: pre; 
+    overflow-x: auto;
   }
 .hll { background-color: #ffffcc }
   .c { color: #B0B2B0; font-style: italic } /* Comment */

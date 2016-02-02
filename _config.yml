@@ -33,7 +33,6 @@ kramdown:
   entity_output: as_char
   toc_levels: 1..6
   use_coderay: false
-  
 
 #
 ###################################
