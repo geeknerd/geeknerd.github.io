@@ -10,18 +10,22 @@ pre, code {
 }
 code {
   background: #e96900;
+  padding: 3px 5px;
+  margin: 0 2px;
   word-break: break-all;
   white-space: nowrap;
-  border-radius: 0;
+  border-radius: 2px;
 }
 pre { // only apply for code blocks
   overflow: auto;
   display: block;
-  margin: 0 0;
+  margin: 0 0 1em;
+  padding: 1em;
   line-height: $base-line-height * 0.925;
   word-break: break-all;
   word-wrap: break-word;
-  font-weight: bold;
+  border-radius: 0;
+  font-weight: normal;
 }
 pre code {
   background: transparent;
