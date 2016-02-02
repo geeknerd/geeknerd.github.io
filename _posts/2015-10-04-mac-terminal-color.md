@@ -13,21 +13,11 @@ Now, to customize the colors in Terminal, essentially I'm assuming you want to s
 
 
 One simplest way to colorize Terminal would be using the ```-G``` argument that comes with ```ls```. To accomplish this, one could open up ```.bash_profile``` and add the following to it:
-
-I am testing the highlighting!!!!!
-~~~~java
-	public static void main(String[] args){
-		Test test = new Test();
-		test.start();
-		return 0;
-	}
-~~~~
-~~~~shell
+{% highlight bash %}
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ls='ls -GFh'
-~~~~
-
+{% endhighlight %}
 That should at least give you some colorful ```ls``` results. However, it doesn't give you the full power of controlling the colors in your Terminal and we all know that programmers want to take over everything as they can. So, a great GNU tool comes to the stage: [GNU Coreutils](http://www.gnu.org/software/coreutils/coreutils.html). Coreutils gives you the flexibility of controlling the colors but also other manipuation utilities you need from a GNU os. 
 To get Coreutils, the easiest way is through ```Homebrew```:
 {% highlight bash %}
