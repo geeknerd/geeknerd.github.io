@@ -29,7 +29,7 @@ pre { // only apply for code blocks
 pre code::before {
 	      counter-increment: line;
 	      content: counter(line);
-	      display: block;
+	      display: inline-block;
 	      border-right: 1px solid #ddd;
 	      padding: 0 .5em;
 	      margin-right: .5em;
