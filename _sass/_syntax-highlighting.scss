@@ -25,16 +25,6 @@ pre { // only apply for code blocks
   word-wrap: break-word;
   border-radius: 5px;
   font-weight: 600;
-  
-  &:before {
-        counter-increment: line;
-        content: counter(line);
-        display: inline-block;
-        border-right: 1px solid #ddd;
-        padding: 0 .5em;
-        margin-right: .5em;
-        color: #888
-      }
 }
 
 pre code {
@@ -118,3 +108,26 @@ pre code {
   .il { color: #666666 } /* Literal.Number.Integer.Long */
 }
 
+pre .line-number {
+  /* Ukuran line-height antara teks di dalam tag <code> dan <span class="line-number"> harus sama! */
+  font:normal normal 12px/14px "Courier New",Courier,Monospace;
+  color:black;
+  display:block;
+}
+
+pre .line-number {
+  float:left;
+  margin:0 1em 0 -1em;
+  border-right:1px solid;
+  text-align:right;
+}
+
+pre .line-number span {
+  display:block;
+  padding:0 .5em 0 1em;
+}
+
+pre .cl {
+  display:block;
+  clear:both;
+}
