@@ -11,11 +11,11 @@ tags: [MySQL]
 * When creating a database, the default behavior of case sensitivity is set by the collation used. Changing a collation using a query could only use the same ```CHARACTER SET```. 
 To use a case sensitive wildcard in a ```SELECT``` query, it is simpler to use ```BINARY``` operator after the ```LIKE```. Like the one below,
 
-```sql
+{% highlight sql lineno %}
 SELECT prod_name, prod_price, prod_id FROM products 
 WHERE prod_name LIKE BINARY'%Anvil%'
 ORDER BY prod_name;
-```
+{% endhighlight %}
 
 The result is:
 
@@ -28,6 +28,7 @@ The result is:
 ~~~ sql
 WHERE prod_name REGEXP BINARY 'JetPack .000';
 ~~~
+
 
 * ```^``` will negate everything in the ```[]```. Therefore, ```[^123]``` will match characters other than 1 and 2 and 3. Same as ```[^1-3]```.
 
