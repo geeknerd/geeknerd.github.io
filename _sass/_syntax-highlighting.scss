@@ -8,7 +8,7 @@ pre, code {
   background-color: #f8f8f8;
   font-size: ($base-font-size - 2);
 }
-code {
+code {				//style for inline code
   color: #ec84e7;  //color for inline codes
   word-break: break-all;
   white-space: normal;
@@ -25,7 +25,18 @@ pre { // only apply for code blocks
   word-wrap: break-word;
   border-radius: 5px;
   font-weight: 600;
+  
+  &:before {
+        counter-increment: line;
+        content: counter(line);
+        display: inline-block;
+        border-right: 1px solid #ddd;
+        padding: 0 .5em;
+        margin-right: .5em;
+        color: #888
+      }
 }
+
 pre code {
   background: transparent;
   white-space: pre;
