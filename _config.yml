@@ -3,16 +3,17 @@
 # Site wide configuration
 ####################################
 #
-title:       "Renyuan's blog"
-description: 'A backend developer who loves design awesome things. Working for RendezvousCheznous atm in Marseille, France.'
-url:         # the base hostname & protocol for your site
-
+title: Yi Xia
+email: yxia921@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  A simple blog to keep track of what interests me in life.
+url: http://geeknerd.github.io # the base hostname & protocol for your site
 #
 ###################################
 # Jekyll configuration
 ####################################
 #
-timezone:          Europe/Paris
+timezone:          America/Chicago
 markdown:          kramdown
 highlighter:       rouge
 excerpt_separator: <!--more-->
@@ -31,34 +32,33 @@ kramdown:
 ####################################
 #
 owner:
-  name: Renyuan
-  avatar: avatar.jpg
-  job: "PHP & Ruby Developer"
-  bio: "A backend developer who loves design awesome things. Working for RendezvousCheznous atm in Marseille, France."
-  email: zourenyuan@gmail.com
-  disqus-shortname: renyuanzblog
-  twitter: alittlered3 #username
-  facebook: #username
-  google:
-    plus: #username
-    analytics: UA-62251910-1
-    verify:
-    ad-client:
-    ad-slot:
-  bing-verify:
-  github: renyuanz #username
-  stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
-  linkedin: #username
-  xing: #username
-  instagram: #username
-  lastfm: #username
-  tumblr: #username
-  pinterest: #username
-  foursquare: #username
-  steam: #username
-  dribbble: #username
-  youtube: #username
-  soundcloud: #username
-  weibo: #username
-  flickr: #username
-  codepen: #username
+  name: Yi Xia
+    avatar: avatar.jpg
+    bio: Too young, too simple, sometimes naive.
+    email: yxia921@gmail.com
+    disqus-shortname: geeknerd
+    twitter: #username
+    facebook: bao571 #username
+    google:
+      plus: YiXia571 #username
+      analytics: UA-67656024-1
+      verify:
+      ad-client:
+      ad-slot:
+    bing-verify:
+    github: geeknerd #username
+    stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
+    linkedin: hiyixia #username
+    xing: #username
+    instagram: #username
+    lastfm: #username
+    tumblr: #username
+    pinterest: #username
+    foursquare: #username
+    steam: #username
+    dribbble: #username
+    youtube: #username
+    soundcloud: #username
+    weibo: geeknerdlab #username
+    flickr: #username
+    codepen: #username
