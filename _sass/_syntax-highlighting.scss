@@ -18,7 +18,7 @@ code {
 pre { // only apply for code blocks
   overflow: auto;
   display: block;
-  margin: 10px 10px 10px 10px;
+  margin: 10px 0 10px 0;
   padding: 1em;
   line-height: $base-line-height * 0.925;
   word-break: break-all;
