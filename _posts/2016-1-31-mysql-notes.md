@@ -11,8 +11,6 @@ tags: [MySQL]
 * When creating a database, the default behavior of case sensitivity is set by the collation used. Changing a collation using a query could only use the same ```CHARACTER SET```. 
 To use a case sensitive wildcard in a ```SELECT``` query, it is simpler to use ```BINARY``` operator after the ```LIKE```. Like the one below,
 
-SHOW LINE NUMBER!
-
 ~~~sql
 SELECT prod_name, prod_price, prod_id FROM products 
 WHERE prod_name LIKE BINARY'%Anvil%'
