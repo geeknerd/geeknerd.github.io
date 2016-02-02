@@ -13,7 +13,8 @@ To use a case sensitive wildcard in a ```SELECT``` query, it is simpler to use `
 
 {% highlight sql linenos %}
 SELECT prod_name, prod_price, prod_id FROM products 
-WHERE prod_name LIKE BINARY'%Anvil%';
+WHERE prod_name LIKE BINARY'%Anvil%'
+ORDER BY prod_name;
 {% endhighlight %}
 The result is:
 
