@@ -42,11 +42,13 @@ WHERE Soundex(cust_contact) = Soundex('Y Lie');
 Use ```BINARY``` mode for case sensitive search. 
 
 Syntax is as: 
+{% highlight MySQL %}
 SELECT note_text FROM productnotes WHERE Match(note_text) Against('rabbit');
+{% endhighlight %}
 
 * Use ```WITH QUERY EXPANSION``` to full-text search for related rows based on first search for the keyword. 
-``` MySQL
+{% highlight MySQL %}
 SELECT note_text 
 FROM productnotes 
 WHERE Match(note_text) Against('anvils' WITH QUERY EXPANSION);
-```
+{% endhighlight %}
