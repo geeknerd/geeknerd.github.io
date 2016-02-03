@@ -7,3 +7,7 @@ $(document).ready(function() {
     $(tags[i]).css('background-color', selectedColor);
   }
 });
+
+$(document).ready(function () {
+	$( ".highlighttable" ).wrap("<div class='table-responsive'></div>");
+});
