@@ -11,7 +11,7 @@ tags: [MySQL]
 * When creating a database, the default behavior of case sensitivity is set by the collation used. Changing a collation using a query could only use the same ```CHARACTER SET```. 
 To use a case sensitive wildcard in a ```SELECT``` query, it is simpler to use ```BINARY``` operator after the ```LIKE```. Like the one below,
 
-{% highlight sql linenos %}
+{% highlight sql %}
 SELECT prod_name, prod_price, prod_id FROM products 
 WHERE prod_name LIKE BINARY'%Anvil%'
 ORDER BY prod_name;
@@ -36,7 +36,7 @@ Omitting ```FROM``` clause after ```SELECT``` simply tests the function and calc
 
 * **SOUNDEX** matches patterns that sound similar to the specified value, like the following:
 
-{% highlight sql linenos=table %}
+{% highlight sql %}
 SELECT cust_name, cust_contact
 FROM customers
 WHERE Soundex(cust_contact) = Soundex('Y Lie');
