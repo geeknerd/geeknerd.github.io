@@ -41,6 +41,7 @@ SELECT cust_name, cust_contact
 FROM customers
 WHERE Soundex(cust_contact) = Soundex('Y Lie');
 ~~~
+{.linenos=table}
 
 ![MySQL SoundEX]({{site.url}}/img/mysql-sex.png)
 
