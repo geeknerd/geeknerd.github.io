@@ -36,11 +36,12 @@ Omitting ```FROM``` clause after ```SELECT``` simply tests the function and calc
 
 * **SOUNDEX** matches patterns that sound similar to the specified value, like the following:
 
-~~~ sql
+{% highlight sql linenos=table %}
 SELECT cust_name, cust_contact
 FROM customers
 WHERE Soundex(cust_contact) = Soundex('Y Lie');
-~~~
+{% endhighlight %}
+
 
 ![MySQL SoundEX]({{site.url}}/img/mysql-sex.png)
 
