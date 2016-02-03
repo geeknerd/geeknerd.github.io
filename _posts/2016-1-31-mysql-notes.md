@@ -64,9 +64,11 @@ WHERE Match(note_text) Against('anvils' WITH QUERY EXPANSION);
 ~~~
 
 * ```IN BOOLEAN MODE``` can include word, exclude word, modify word's ranking and search phrase in full-text search. 
+
 ~~~ sql
 SELECT note_text
 FROM productnotes
 WHERE MATCH(note_text) AGAINST('+safe -rope* +(<combination)' IN BOOLEAN MODE);
 ~~~
+
 This search matches words safe and combination, lowering the ranking of the latter, and excludes any words that start with "rope". 
