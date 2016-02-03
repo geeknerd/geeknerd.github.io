@@ -46,6 +46,7 @@ pre code {
     white-space: pre; 
     overflow-x: auto;
   }
+  .lineno { color: #ccc; display:block; padding: 0 0; border-right:1px solid #ccc; }
 .hll { background-color: #ffffcc }
   .c { color: #B0B2B0; font-style: italic } /* Comment */
   .err {  } /* Error */
@@ -109,4 +110,4 @@ pre code {
   .il { color: #666666 } /* Literal.Number.Integer.Long */
 }
 
-.highlight .lineno { color: #ccc; display:block; padding: 0 0; border-right:1px solid #ccc; }
+
