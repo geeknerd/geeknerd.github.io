@@ -83,3 +83,5 @@ SET cust_name = 'The Fudds',
     cust_email = 'elmer@fudd.com'
 WHERE cust_id = 10005;
 ~~~
+
+* Every row in a table must have a unique primary key value. If a single column is used for the primary key, it must be unique; if multiple columns are used, the combination of them must be unique.
