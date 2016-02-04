@@ -74,3 +74,12 @@ WHERE MATCH(note_text) AGAINST('+safe -rope* +(<combination)' IN BOOLEAN MODE);
 This search matches words safe and combination, lowering the ranking of the latter, and excludes any words that start with "rope". 
 
 * Use ```LOW_PRIORITY``` in ```INSERT```, ```UPDATE``` and ```DELETE``` statements to lower the priority of the statements so they don't affect performance. 
+
+* Use ```IGNORE``` to continue updating table even error occurs. Such as:
+
+~~~ sql
+UPDATE IGNORE customers
+SET cust_name = 'The Fudds',
+    cust_email = 'elmer@fudd.com'
+WHERE cust_id = 10005;
+~~~
