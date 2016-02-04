@@ -118,3 +118,5 @@ SELECT AVG(prod_price) INTO p3 FROM products;
 END;
 DELIMITER ;
 ~~~
+
+* All MySQL variable names must begin with ```@```.
