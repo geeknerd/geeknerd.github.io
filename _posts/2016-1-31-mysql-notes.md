@@ -120,3 +120,7 @@ DELIMITER ;
 ~~~
 
 * All MySQL variable names must begin with ```@```.
+
+* A ```cursor``` is a query stored on the MySQL server as the result set retrieved by a ```SELECT``` statement. Cursor is used to scroll or browse through the data as needed, something that can't be achieved through single ```SELECT``` statement. 
+* MySQL cursors may only be used within stored procedures(and functions).
+* Cursor needs to be opened after declaration and closed after done. 
