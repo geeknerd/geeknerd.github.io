@@ -126,7 +126,7 @@ DELIMITER ;
 * Cursor needs to be opened after declaration and closed after done. 
 * Local variables defined with ```DECLARE``` must be defined before any cursors or handlers are defined, and handlers must be defined after any cursors.
 
-~~~ mql
+~~~ sql
 CREATE PROCEDURE processorders()
 BEGIN
 
