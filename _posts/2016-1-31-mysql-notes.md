@@ -173,3 +173,10 @@ END;
 ~~~
 
 * A *trigger* is a MySQL statement (or a group of statements enclosed within BEGIN and END statements) that are automatically executed by MySQL in response to ```DELETE```, ```INSERT``` or ```UPDATE```.
+* A virtual table named ```NEW``` is used to access the rows when using ```INSERT``` trigger, like:
+
+~~~ sql
+CREATE TRIGGER neworder AFTER INSERT ON orders
+FOR EACH ROW SELECT NEW.order_num;
+~~~
+
