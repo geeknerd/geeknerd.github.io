@@ -180,3 +180,4 @@ CREATE TRIGGER neworder AFTER INSERT ON orders
 FOR EACH ROW SELECT NEW.order_num;
 ~~~
 
+* **In MySQL, triger can not return a resultset, so the above will not work. Either use a procedure or use a ```SET``` in a triger could solve the problem.** *
