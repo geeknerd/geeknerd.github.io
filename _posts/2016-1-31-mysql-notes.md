@@ -115,7 +115,7 @@ BEGIN
 SELECT MIN(prod_price) INTO p1 FROM products;
 SELECT MAX(prod_price) INTO p2 FROM products;
 SELECT AVG(prod_price) INTO p3 FROM products;
-END;
+END; //
 DELIMITER ;
 ~~~
 
