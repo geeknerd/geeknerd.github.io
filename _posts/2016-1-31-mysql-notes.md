@@ -124,3 +124,52 @@ DELIMITER ;
 * A ```cursor``` is a query stored on the MySQL server as the result set retrieved by a ```SELECT``` statement. Cursor is used to scroll or browse through the data as needed, something that can't be achieved through single ```SELECT``` statement. 
 * MySQL cursors may only be used within stored procedures(and functions).
 * Cursor needs to be opened after declaration and closed after done. 
+* Local variables defined with ```DECLARE``` must be defined before any cursors or handlers are defined, and handlers must be defined after any cursors.
+
+~~~ mql
+CREATE PROCEDURE processorders()
+BEGIN
+
+	-- Declare local variables
+    DECLARE done BOOLEAN DEFAULT 0;
+    DECLARE o INT;
+    DECLARE t DECIMAL (8,2);
+    
+    -- Declare the cursor
+    DECLARE ordernumbers CURSOR
+    FOR
+    SELECT order_num FROM orders;
+	
+    -- Declare continue handler
+    DECLARE CONTINUE HANDLER FOR SQLSTATE '02000' SET done = 1;
+    
+    -- Create a table to store the results
+    CREATE TABLE IF NOT EXISTS ordertotals
+		(order_num INT, total DECIMAL (8,2));
+        
+	-- Open the cursor
+    OPEN ordernumbers;
+    
+    -- Loop through all rows
+    REPEAT
+		
+        -- Get order number
+        FETCH ordernumbers INTO o;
+        
+        -- Get the total for this order
+        CALL ordertotal(o, 1, t);
+        
+        -- Insert order and total into ordertotals
+        INSERT INTO ordertotals(order_num, total)
+        VALUES(o, t);
+        
+	-- End of loop
+    UNTIL done END REPEAT;
+    
+    -- Close the cursor
+    CLOSE ordernumbers;
+    
+END;
+~~~
+
+* A *trigger* is a MySQL statement (or a group of statements enclosed within BEGIN and END statements) that are automatically executed by MySQL in response to ```DELETE```, ```INSERT``` or ```UPDATE```.
