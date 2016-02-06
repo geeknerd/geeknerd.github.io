@@ -181,3 +181,26 @@ FOR EACH ROW SELECT NEW.order_num;
 ~~~
 
 * **In MySQL, triger can not return a resultset, so the above will not work. Either use a procedure or use a ```SET``` in a triger could solve the problem.**
+* Use transactions for blocks that must be executed as a batch without failure. 
+
+~~~ sql 
+START TRANSACTION;
+DELETE FROM orderitems WHERE order_num = 20010;
+SAVEPOINT delete1;
+DELETE FROM orders WHERE order_num = 20010;
+COMMIT;
+~~~
+
+* Use ```AUTOCOMMIT``` to change the commit behavior of statement, which is defaulted as implicitly commit. The ```AUTOCOMMIT``` flag is per connection, not server-wide. 
+
+~~~ sql
+SET autocommit=0;
+~~~
+
+* Use ```IFNULL()``` function to return a different value when retrieve ```NULL``` values from the table. 
+
+~~~ sql 
+SELECT  
+IFNULL(CONCAT(cust_name,' has email: ', cust_email), CONCAT(cust_name,' has no email'))
+AS cust_info  FROM customers;
+~~~
