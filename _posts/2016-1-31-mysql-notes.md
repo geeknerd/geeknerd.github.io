@@ -207,4 +207,4 @@ AS cust_info  FROM customers;
 
 *Working script*
 
-{% gist geeknerd/mysql_crash_course.sql %}
+{% gist geeknerd/dade57c153f138bc840f %}
