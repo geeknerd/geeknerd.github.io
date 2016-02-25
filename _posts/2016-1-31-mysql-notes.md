@@ -204,3 +204,7 @@ SELECT
 IFNULL(CONCAT(cust_name,' has email: ', cust_email), CONCAT(cust_name,' has no email'))
 AS cust_info  FROM customers;
 ~~~
+
+*Working script*
+
+{% gist geeknerd/mysql_crash_course.sql %}
