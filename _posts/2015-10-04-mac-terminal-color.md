@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize Terminal Colors in El Capitan
-date: 2015-10-04
+title: Customize Terminal Colors in Sierra
+date: 2017-08-29
 comments: true
 pinned: true
 tags: [Mac OS X]
