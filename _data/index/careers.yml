@@ -1,0 +1,16 @@
+# careers section data
+# if you don't have language feature(language.yml is empty), ignore "i18n" items
+- name: Ericsson
+  link: https://www.ericsson.com/cn/en
+  date: February 2017 - August 2017 #<i class="fa fa-clock-o" aria-hidden="true" title="Until Now"></i>
+  job: Software Engineer
+
+- name: QuantifiedAg
+  link: http://quantifiedag.com/
+  date: October 2016 - February 2017
+  job: Software Engineer
+
+- name: Wenlin
+  link: https://wenlin.com/
+  date: February 2016 - May 2016
+  job: Software Developer
