@@ -13,6 +13,9 @@
             {% if project.website %}
             <a href="{{ project.website }} "><i class="fa fa-fw fa-home"></i>Homepage</a>
             {% endif %}
+            {% if project.file %}
+            <a href="{{ project.file }} "><i class="fa fa-file-archive-o"></i>ZipFile</a>
+            {% endif %}
         </ul>
     {% endfor %}
   </div>
