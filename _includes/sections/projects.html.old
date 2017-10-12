@@ -1,10 +1,9 @@
 <h2><span data-i18n="skills.my_skills">Projects</span></h2>
 
-<div class="archive">
-  <div class="timeline" id="timeline">
-    {% for project in site.data.index.projects %}
-          <div class="archive-title"><div class="archive-year"><strong>{{ project.name }}</strong> </div></div>
-          <h2>{{ project.name }}</h2>
+{% for project in site.data.index.projects %}
+    <div class="row">
+            <div class="col">
+                <h2>{{ project.name }}</h2>
                 <p>{{ project.descr }}</p>
 
                 {% if project.github %}
@@ -14,6 +13,6 @@
                 <a href="{{ project.website }} "><i class="fa fa-fw fa-home"></i>Homepage</a>
                 {% endif %}
 
-    {% endfor %}
-  </div>
-</div>
+            </div>
+    </div>
+{% endfor %}
