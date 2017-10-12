@@ -3,17 +3,18 @@
 <div class="archive">
   <div class="timeline" id="timeline">
     {% for project in site.data.index.projects %}
-          <div class="archive-title"><div class="archive-year"><strong>{{ project.name }}</strong> </div></div>
-          <h2>{{ project.name }}</h2>
-                <p>{{ project.descr }}</p>
+        <div class="archive-title"><div class="archive-year"><strong>{{ project.name }}</strong> </div></div>
+        <ul>
+        <h2>{{ project.name }}</h2>
+            <li><p>{{ project.descr }}</p></li>
 
-                {% if project.github %}
-                <a href="{{ project.github }} "><i class="fa fa-fw fa-github"></i>GitHub</a>
-                {% endif %}
-                {% if project.website %}
-                <a href="{{ project.website }} "><i class="fa fa-fw fa-home"></i>Homepage</a>
-                {% endif %}
-
+            {% if project.github %}
+            <a href="{{ project.github }} "><i class="fa fa-fw fa-github"></i>GitHub</a>
+            {% endif %}
+            {% if project.website %}
+            <a href="{{ project.website }} "><i class="fa fa-fw fa-home"></i>Homepage</a>
+            {% endif %}
+        </ul>
     {% endfor %}
   </div>
 </div>
