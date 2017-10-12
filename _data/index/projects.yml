@@ -2,4 +2,4 @@
   descr: "Created and maintaining a github page based on an existing Jekyll template."
   image: None
   website: https://geeknerd.github.io
-  file: {site.url}/assets/geeknerd.github.io.zip
+  file: /assets/geeknerd.github.io.zip
