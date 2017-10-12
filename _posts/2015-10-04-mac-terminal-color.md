@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize Terminal Colors in Sierra
+title: Customize Terminal Colors in Mac OS X
 date: 2017-08-29
 comments: true
 pinned: true
@@ -69,3 +69,4 @@ set nu
 ~~~
 
 There you go. Colorful Terminal! Wonderful life!
+(Mentioned methods have been tested on Yosemite and Sierra, not guaranteed to work on all versions.)
