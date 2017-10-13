@@ -7,7 +7,9 @@ comments: true
 pinned: true
 tags: [Mac OS X]
 image:
-  feature: terminal-theme-mac-os-x.jpg
+  feature: term-icon.jpg
+  credit: Ilya Pavlov
+  creditlink: https://unsplash.com/@ilyapavlov
 ---
 
 One of the most powerful tools on a Mac system would be the Terminal (or the trackpad as somebody insists). While most users won't even touch the Terminal on a daily basis, it stills has its value to most programmers or SE's or whoever wants to mess around with GNU. Among the Terminal users, part of them use the default settings that come with the system for Terminal, others would like to add their own colors to the app, to the latter I consider myself belong to. 
