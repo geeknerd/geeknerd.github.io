@@ -6,7 +6,15 @@ modified: 2016-02-02
 comments: true
 pinned: true
 tags: [MySQL]
+image:
+  feature: mysql.jpg
 ---
+
+Notes taken when reviewing some fundamental yet useful MySQL commands. 
+
+Some commands are basic operations while others might require a bit more understanding and could be unexpectedly helpful during specific scenario. 
+
+<!--more-->
 
 * When creating a database, the default behavior of case sensitivity is set by the collation used. Changing a collation using a query could only use the same ```CHARACTER SET```. 
 To use a case sensitive wildcard in a ```SELECT``` query, it is simpler to use ```BINARY``` operator after the ```LIKE```. Like the one below,
