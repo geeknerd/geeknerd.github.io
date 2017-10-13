@@ -11,32 +11,9 @@
       </div>
       <div class="content col-sm-12 col-md-9">
         {{ content }}
-        <!--  jQuery 1.7+  -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-    <!-- Material button -->
-    <button class="material-scrolltop" type="button"></button>
-
-    <!-- Include js plugin -->
-    <script src="../src/material-scrolltop.js"></script>
-
-    <!-- Initialize -->
-    <script>
-        $(document).ready(function() {
-            $('body').materialScrollTop({
-                revealElement: 'header',
-                revealPosition: 'bottom',
-                onScrollEnd: function() {
-                    console.log('Scrolling End');
-                }
-            });
-        });
-    </script>
         {% include footer.html %}
       </div>
     </div>
-
-
 
   </body>
 
