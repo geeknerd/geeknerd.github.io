@@ -24,15 +24,13 @@ BASE_PATH : http://geeknerd.github.io
 sass:
   sass_dir: _sass
   style: compressed
-gems:
-  - jekyll-sitemap
 
 kramdown:
   auto_ids: true
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
-  use_coderay: false
+  enable_coderay: false
   pygments: true
   
 
@@ -75,3 +73,8 @@ owner:
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
+
+# This will require each of these plugins automatically.
+plugins:
+  - jekyll-gist
+  - jekyll-paginate
