@@ -18,6 +18,24 @@
         <a href="{{ site.url }}/">home</a>
         <span>/</span>
         </li>
+        
+        <!-- test different order -->
+        <li class="nav-item">
+          <a href="{{ site.url }}/resume">Resume</a>
+          <span>/</span>
+        </li>
+        <li class="nav-item">
+          <a href="{{ site.url }}/archive">Archive</a>
+          <span>/</span>
+        </li>
+        <li class="nav-item">
+          <a href="{{ site.url }}/updates">Updates</a>
+          <span>/</span>
+        </li>
+        <li class="nav-item">
+          <a href="{{ site.url }}/tags">Categories</a>
+        </li>
+
         <!--
         {% for page in site.pages %} {% if page.title %}
         <li class="nav-item">
@@ -25,19 +43,7 @@
         </li>
         {% endif %} {% endfor %}
         -->
-        <!-- test different order -->
-        <li class="nav-item">
-          <a href="{{ site.url }}/resume">Resume</a> <span>/</span>
-        </li>
-        <li class="nav-item">
-          <a href="{{ site.url }}/archive">Archive</a> <span>/</span>
-        </li>
-        <li class="nav-item">
-          <a href="{{ site.url }}/updates">Updates</a> <span>/</span>
-        </li>
-        <li class="nav-item">
-          <a href="{{ site.url }}/tags">Categories</a> <span>/</span>
-        </li>
+        
       </ul>
     </nav>
     {% include social-links.html %}
