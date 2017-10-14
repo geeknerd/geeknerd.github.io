@@ -2,7 +2,7 @@
 layout: post
 title: Customize Terminal Colors in Mac OS X
 excerpt: "Some nice ways to colorize Terminal in Mac OS X (Yosemite and Sierra, compatibility issues might apply.)"
-date: 2015-10-04
+date: 2017-08-24
 modified: 2017-10-08
 comments: true
 pinned: true
