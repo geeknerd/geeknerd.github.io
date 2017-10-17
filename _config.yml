@@ -78,3 +78,4 @@ exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.
 plugins:
   - jekyll-gist
   - jekyll-paginate
+  - jemoji
