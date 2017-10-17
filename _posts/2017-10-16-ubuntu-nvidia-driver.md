@@ -32,17 +32,17 @@ Ubuntu uses nouveau as its graphic card driver, which we need to disable from th
 Due to the nouveau driver, Ubuntu can't log into desktop, thus no terminal to use. Therefore, at the login page, enter TTY mode by pressing ```Ctrl+Alt+F1```.
 
 Remember to change permission for blacklist.conf first then revert it back. 
-~~~ shell
+```shell
 ll /etc/modprobe.d/blacklist.conf
-~~~
+```
 
 Set permission
-~~~ shell
+```bash
 sudo chmod 666 /etc/modprobe.d/blacklist.conf
-~~~
+```
 
 Edit it with your favorite editor:
-~~~
+~~~bash
 sudo vi /etc/modprobe.d/blacklist.conf
 ~~~
 
@@ -56,32 +56,32 @@ blacklist nvidiafb
 {: .notice}
 
 Revert back the permission for safety.
-~~~ shell
+```bash
 sudo chmod 644 /etc/modprobe.d/blacklist.conf
-~~~
+```
 
 Remember to update the kernel before use.
-~~~ shell
+```bash
 sudo update-initramfs -u
-~~~
+```
 
 **Remember to reboot at this point.** 
 
 Make sure nouveau is blacklisted. 
-~~~ shell
+```bash
 lsmod | grep nouveau
-~~~
+```
 
 ### Install NVIDIA driver
 Unless the hardware doesn't come with a integrated graphic card, at this point, it should be possible to enter Ubuntu desktop environment. (Mixed resolution might apply but don't pacnic... yet). Now we add official driver through Terminal. 
-~~~ shell
+```bash
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt-get update
-~~~
+```
 Remember to search for your suitable (recommended) driver version. 
-~~~ shell
+```bash
 ubuntu-drivers devices
-~~~
+```
 ![]({{site.url}}/img/device.png)
 {: .center}
 *If the recommended version doesn't work, try different ones.*  
