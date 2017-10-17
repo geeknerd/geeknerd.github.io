@@ -13,7 +13,7 @@ image:
 ## HTML Elements
 
 Below is just about everything you'll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.  
-Put two spaces after a line for a new line. 
+Put two spaces after a line for a new line in the text.
 
 # Heading 1
 
