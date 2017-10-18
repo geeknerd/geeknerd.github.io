@@ -10,6 +10,11 @@ image:
   feature: sample-image-2.jpg
 ---
 
+#### Testing new functions:
+
+Adding some inline equations \\(a^2 + b^2 = c^2\\) to see if it renders.
+Also some block equations \\[a^2 + b^2 = c^2\\]. 
+
 ## HTML Elements
 
 Below is just about everything you'll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.  
