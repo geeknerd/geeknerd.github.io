@@ -113,7 +113,6 @@ JOIN orderitems AS oi ON o.order_num = oi.order_num;
 * To use a command line utility, temporary delimiter should be used to overwrite ```;``` as follows:
 
 {% highlight sql linenos %}
-~~~ sql
 DELIMITER //
 CREATE PROCEDURE productpricing(
 OUT p1 DECIMAL (8,2),
@@ -126,7 +125,6 @@ SELECT MAX(prod_price) INTO p2 FROM products;
 SELECT AVG(prod_price) INTO p3 FROM products;
 END; //
 DELIMITER ;
-~~~
 {% endhighlight %}
 
 * All MySQL variable names must begin with ```@```.
@@ -136,7 +134,7 @@ DELIMITER ;
 * Cursor needs to be opened after declaration and closed after done. 
 * Local variables defined with ```DECLARE``` must be defined before any cursors or handlers are defined, and handlers must be defined after any cursors.
 
-~~~ sql
+{% highlight sql linenos %}
 CREATE PROCEDURE processorders()
 BEGIN
 
@@ -180,7 +178,7 @@ BEGIN
     CLOSE ordernumbers;
     
 END;
-~~~
+{% endhighlight %}
 
 * A *trigger* is a MySQL statement (or a group of statements enclosed within BEGIN and END statements) that are automatically executed by MySQL in response to ```DELETE```, ```INSERT``` or ```UPDATE```.
 * A virtual table named ```NEW``` is used to access the rows when using ```INSERT``` trigger, like:
