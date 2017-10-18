@@ -3,6 +3,13 @@
  */
 
 
+.table-responsive { color: #333; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 10px; }
+//.linenodiv pre { margin: 0px 0px; color: #aaa; border-radius: 0; border: none; border-right: 0px; word-wrap: normal; }
+//.linenodiv pre code { white-space: pre; }
+.code .highlight pre { margin: 6px 0px; border-radius: 0; border: none; word-wrap: normal; }
+.highlighttable { width: 100%; background-color: #F5F5F5;  table-layout: fixed; }
+//.linenos { width: auto; }
+
 pre, code {
   font-family: $monospace-font-family;
   color: #525252;
@@ -10,20 +17,22 @@ pre, code {
   font-size: ($base-font-size - 2);
 }
 code {				//style for inline code
-  color: #e96900;
-  border-radius: 2px;
+  color: #ec84e7;  //color for inline codes
+  word-break: break-all;
   white-space: normal;
+  border-radius: 2px;
+  font-weight: 600;
 }
 pre { // only apply for code blocks
   overflow: auto;
   display: block;
+  margin: 10px 0;
   padding: 1em;
-  margin: 0 0 1em;
   line-height: $base-line-height * 0.925;
   word-break: break-all;
   word-wrap: break-word;
   border-radius: 5px;
-  font-weight: normal;
+  font-weight: 600;
   }
 
 pre code {
@@ -37,84 +46,15 @@ pre code {
 	
   }
 }
-
-.highlight table { 
-  margin-bottom: 0; 
-  border: none;
-}
-
-/* The white-space and word-wrap directives ensure that code lines are not
- * wrapped, and instead we end up with horizontal scroll bars. The next
- * block handles this for code blocks with line numbers, the next for those
- * without.
- */
-.highlight td.code pre {
-  padding: 0 0.5em 0 1em;
-  white-space: pre;
-  border: none;
-}
-
-/* Get rid of borders around code */
-.highlight td.code { 
-  color: #e96900;
-  border: none; 
-}
-
-/* Introduce right border only on line number gutter to separate
- * line numbers and code. Introduce slight padding between line
- * numbers and border.
- */
-.highlight td.gutter.gl { 
-  width: 1px;
-  border: none;
-  color: #93a1a1;
-  word-break: keep-all;
-  padding: 0 0.1em 0 0.1em;
-  white-space: normal;
-}
-
-/* Prevent line numbers from being selected or copied and
- * pasted by users.
- * Also set the border, padding of linenumbers. 
- */
-.highlight .lineno {   
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  padding: 0 0.5em 0 0; 
-  word-break: keep-all;
-  border: 1px #000;
-  border-radius : 0;
-  border-style: none dashed none none;
-  border-color: #8b8b8b;
-  }
-
-
 .highlight {
-  margin: 0;
-  pre {
-    position: relative;
-  }
   pre code {
     color: #525252;
-    &::before {
-      content: attr(data-lang);
-      position: absolute;
-      top: 0;
-      right: 0;
-      color: #ccc;
-      text-align: right;
-      text-transform: uppercase;
-      font-size: 0.85em;
-      padding: 5px 1em 1em 0;
-      line-height: 20px;
-      height: 20px;
-      font-weight: 600;
-    }
+    word-wrap: normal;
+    display: block; 
+    white-space: pre; 
+    overflow-x: auto;
   }
+  pre.linenos { padding: 0px; }
   .hll { background-color: #ffffcc }
   .c { color: #B0B2B0; font-style: italic } /* Comment */
   .err {  } /* Error */
@@ -176,4 +116,6 @@ pre code {
   .vg { color: #B8860B } /* Name.Variable.Global */
   .vi { color: #B8860B } /* Name.Variable.Instance */
   .il { color: #666666 } /* Literal.Number.Integer.Long */
+  .lineno { color: #ccc; display:inline-block; padding: 0 5px; border-right:1px solid #ccc; }
 }
+

@@ -112,6 +112,7 @@ JOIN orderitems AS oi ON o.order_num = oi.order_num;
 * Simplicity, Security, and Performance. 
 * To use a command line utility, temporary delimiter should be used to overwrite ```;``` as follows:
 
+{% highlight sql linenos %}
 ~~~ sql
 DELIMITER //
 CREATE PROCEDURE productpricing(
@@ -126,6 +127,7 @@ SELECT AVG(prod_price) INTO p3 FROM products;
 END; //
 DELIMITER ;
 ~~~
+{% endhighlight %}
 
 * All MySQL variable names must begin with ```@```.
 
