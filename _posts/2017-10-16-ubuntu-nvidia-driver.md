@@ -5,7 +5,7 @@ excerpt: "Basically a way to install the latest NVIDIA driver for GTX1050Ti card
 date: 2017-10-16
 comments: true
 pinned: true
-tags: [Linux, Ubuntu]
+tags: [Linux]
 image:
   feature: ubuntu.jpg
   credit: 

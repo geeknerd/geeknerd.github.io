@@ -4,11 +4,11 @@
 
 
 .table-responsive { color: #333; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 10px; }
-.linenodiv pre { margin: 6px 0px; color: #aaa; border-radius: 0; border: none; border-right: solid 1px; word-wrap: normal; }
+.linenodiv pre { margin: 0px 0px; color: #aaa; border-radius: 0; border: none; border-right: 0px; word-wrap: normal; }
 .linenodiv pre code { white-space: pre; }
 .code .highlight pre { margin: 6px 0px; border-radius: 0; border: none; word-wrap: normal; }
 .highlighttable { width: 100%; background-color: #F5F5F5;  table-layout: fixed; }
-.linenos { width: 40px; }
+.linenos { width: auto; }
 
 pre, code {
   font-family: $monospace-font-family;
@@ -54,7 +54,7 @@ pre code {
     white-space: pre; 
     overflow-x: auto;
   }
-.hll { background-color: #ffffcc }
+  .hll { background-color: #ffffcc }
   .c { color: #B0B2B0; font-style: italic } /* Comment */
   .err {  } /* Error */
   .k { color: #AA22FF; font-weight: bold } /* Keyword */
@@ -115,5 +115,6 @@ pre code {
   .vg { color: #B8860B } /* Name.Variable.Global */
   .vi { color: #B8860B } /* Name.Variable.Instance */
   .il { color: #666666 } /* Literal.Number.Integer.Long */
+  .lineno { color: #ccc; display:inline-block; padding: 0 5px; border-right:1px solid #ccc; }
 }
 
