@@ -86,22 +86,28 @@ ubuntu-drivers devices
 {: .center}
 *If the recommended version doesn't work, try different ones.*  
 
-At this point, remember the version name, ```nvidia-378``` in this case.  
+At this point, remember the version name, ```nvidia-387``` in this case.  
 Enter TTY mode by ```Ctrl+Alt+F1``` to close display manager LightDM
 ~~~ shell
 sudo service lightdm stop
 ~~~
+
+*Ubuntu 17.10 uses DGM in place of LightDM for diaplay manager, therefore the command needs to stop DGM service instead.*  
+~~~ shell
+sudo service dgm stop
+~~~
+
 Now, install the NVIDIA driver and reboot.  
 Might take a while depending on the network speed. 
 ~~~ shell
-sudo apt-get install nvidia-378
+sudo apt-get install nvidia-387
 sudo reboot
 ~~~
 Hopefully, everything works out and login works fine.  
 Check if driver installed correctly and settings could be used.
 ~~~ shell
 sudo nvidia-smi
-sudo nvidia-setting
+sudo nvidia-settings
 ~~~
 *Pictures see the top.*
 
