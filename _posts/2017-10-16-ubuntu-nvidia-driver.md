@@ -73,7 +73,7 @@ lsmod | grep nouveau
 ```
 
 ### Install NVIDIA driver
-Unless the hardware doesn't come with a integrated graphic card, at this point, it should be possible to enter Ubuntu desktop environment. (Mixed resolution might apply but don't pacnic... yet). Now we add official driver through Terminal. 
+Unless the hardware doesn't come with a integrated graphic card, at this point, it should be possible to enter Ubuntu desktop environment. (Mixed resolution might apply but don't panic... yet). Now we add official driver through Terminal. 
 ```bash
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt-get update
