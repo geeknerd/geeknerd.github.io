@@ -92,9 +92,9 @@ Enter TTY mode by ```Ctrl+Alt+F1``` to close display manager LightDM
 sudo service lightdm stop
 ~~~
 
-**Ubuntu 17.10 uses DGM in place of LightDM for diaplay manager, therefore the command needs to stop DGM service instead.**  
+**Ubuntu 17.10 uses GDM in place of LightDM for diaplay manager, therefore the command needs to stop GDM service instead.**  
 ~~~ shell
-sudo service dgm stop
+sudo service gdm stop
 ~~~
 
 Now, install the NVIDIA driver and reboot.  
