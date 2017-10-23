@@ -13,7 +13,14 @@ image:
 #### Testing new functions:
 
 Adding some inline equations \\(a^2 + b^2 = c^2\\) to see if it renders.
-Also some block equations \\[a^2 + b^2 = c^2\\]. 
+Also some block equations. \\[a^2 + b^2 = c^2\\]
+
+#### Create a link to a post
+``` shell
+{% raw %}
+[Name of Link]({{ site.baseurl }}{% post_url 2010-07-21-name-of-post %})
+{% endraw %}
+```
 
 ## HTML Elements
 

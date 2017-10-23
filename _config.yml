@@ -48,6 +48,12 @@ kramdown:
   #     line_numbers: true
   #     start_line: 1
   
+# This will require each of these plugins automatically.
+plugins:
+  - jekyll-gist
+  - jekyll-paginate
+  - jemoji
+
 
 #
 ###################################
@@ -89,8 +95,5 @@ owner:
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
 
-# This will require each of these plugins automatically.
-plugins:
-  - jekyll-gist
-  - jekyll-paginate
-  - jemoji
+
+
