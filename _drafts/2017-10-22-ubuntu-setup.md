@@ -39,7 +39,7 @@ sudo apt remove linux-headers-4.10* linux-image-4.10*
 ```
 
 ### Scientific Networking
-Well, I hope this is self-explanatory.
+Well, I hope this is self-explanatory. Shadowsocks seems to be one of the nice ways to get VPN connections overseas. So far the performance is good. 
 ``` shell
 sudo add-apt-repository ppa:hzwhuang/ss-qt5
 sudo apt-get update
