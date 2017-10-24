@@ -40,7 +40,7 @@ Strengthen precondition / weaken postcondition  
 
 While rule:  
 \\[
-\frac{ \{P \land B \} S \{P\}}{\{P} \text{while} B \text{do} S \text{done} \{ \neg B \land P\}}
+\frac{ \\{P \land B \\}\ S\ \\{P\\}}{\\{P\\}\ \text{while}\ B\ \text{do}\ S\ \text{done}\ \\{ \neg B \land P\\}}
 \\]
 A proof of:  
 $$\{x ≤ 10\}$$ while $$x < 10$$ do $$x := x + 1$$ done $$\{\neg x < 10 ∧ x \leq 10\}$$ 
