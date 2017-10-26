@@ -53,6 +53,7 @@ plugins:
   - jekyll-gist
   - jekyll-paginate
   - jemoji
+  - jekyll-seo-tag
 
 
 #
