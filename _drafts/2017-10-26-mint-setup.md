@@ -18,6 +18,9 @@ Well Cinnamon is quite different and I thought it could be something like Gnome 
 
 Cinnamon has intergrated most of the basic functions to control the appearance of the desktop environment and provided some of the applets to be used. So far I haven't found any that's really interesting to me. (guess I'm just picky). But one thing I do miss from GNOME 3 is the ShellTile extension that groups windows all together and being able to resize, move, act lik a family. Maybe Cinnamon also has that but it remains to be found out.
 
+#### First Things First
+Ironically, I don't even need to configure the graphic driver anymore. I guess that's the beauty of Linux Mint's hardware compatibility.
+
 #### Vim Fuzzy Finder
 Definitely a life saver. Recommended without another thought. Has to be there on all my Linux setup. 
 
@@ -30,7 +33,7 @@ The directory to put the folders is under ```C:\Users\[Windows_User]\AppData\Loc
 I had a hard time finding the directory under my machine I don't know why, but with the help of [Everything](https://www.voidtools.com/){:target="_blank"} it's much easier to locate almost any file in your machine. 
 
 #### Chinese Character Fonts Setting
-Turns out the support for Chinese character is not perfect under Linux Mint. One font I found quite eyecandy is [Overpass](http://overpassfont.org/), an open source project. There are a couple of extra settings to bypass the fonts set by the system or the theme.
+Turns out the support for Chinese character is not perfect under Linux Mint. One font I found quite eyecandy is [Overpass](http://overpassfont.org/){:target="_blank"}, an open source project. There are a couple of extra settings to bypass the fonts set by the system or the theme.
 
 ``` shell
 sudo apt-get install language-selector-common
