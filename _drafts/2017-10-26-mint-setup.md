@@ -28,3 +28,37 @@ The setup should be fairly easy under Linux, just unzip and copy to home directo
 The directory to put the folders is under ```C:\Users\[Windows_User]\AppData\Local\lxss\home\[Linux_User]```
 
 I had a hard time finding the directory under my machine I don't know why, but with the help of [Everything](https://www.voidtools.com/){:target="_blank"} it's much easier to locate almost any file in your machine. 
+
+#### Chinese Character Fonts Setting
+Turns out the support for Chinese character is not perfect under Linux Mint. One font I found quite eyecandy is [Overpass](http://overpassfont.org/), an open source project. There are a couple of extra settings to bypass the fonts set by the system or the theme.
+
+``` shell
+sudo apt-get install language-selector-common
+``` 
+Make sure kate is installed then:
+``` shell
+sudo kate /var/lib/locales/supported.d/zh-hans
+```
+Add the following to fully support Chinese.
+{% highlight shell linenos %}
+{% raw %}
+en_US.UTF-8 UTF-8
+zh_CN.UTF-8 UTF-8
+zh_CN.GBK GBK
+zh_CN GB2312
+zh_CN.GB18030 GB1803
+zh_HK BIG5-HKSCS
+zh_HK.UTF-8 UTF-8
+zh_SG GB2312
+zh_SG.GBK GBK
+zh_SG.UTF-8 UTF-8
+zh_TW BIG5
+zh_TW.EUC-TW EUC-TW
+zh_TW.UTF-8 UTF-8
+{% endraw %}
+{% endhighlight %}
+
+Then excute the following, reboot or not. 
+``` shell
+sudo locale-gen
+```
