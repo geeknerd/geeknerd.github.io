@@ -3,6 +3,7 @@ layout: post
 title: Notes on comprehending software verification.
 excerpt: "Some not-that-well-structured notes during the study of software verification. Including pieces from various sources and mainly plays as a review and combination of the materials I went through."
 date: 2017-10-18
+modifited: 2017-10-28
 comments: true
 pinned: true
 tags: [Notes]
@@ -12,7 +13,7 @@ Software verification is a new area of study to me and I feel the realm of it co
 
 <!--more-->
 
-### Hoare Logic
+### Hoare logic
 **Predicate:**  
   Boolean-valued function $$P: X \to \{true, false\}$$ is called the predicate on X.  
 
@@ -52,3 +53,9 @@ $$\{true\}$$ **while** $$x * x \neq a$$ **do skip done** $$\{x * x = a \land tru
 $$\to$$ 
 $$\{true \land x * x \neq a\}$$ **skip** $$\{true\}$$ (skip rule and consequence rule)
 
+Because the program is either proved to be meet the post condition or it does not terminate, **while rule** only provides *partial correctness*. 
+
+**While rule for total correctness**  
+Introduces a *loop variant*, defined on a *well-founded ordering* < on some domain set D. 
+
+### Predicate transformer

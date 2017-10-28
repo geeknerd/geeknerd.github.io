@@ -18,8 +18,24 @@ Well Cinnamon is quite different and I thought it could be something like Gnome 
 
 Cinnamon has intergrated most of the basic functions to control the appearance of the desktop environment and provided some of the applets to be used. So far I haven't found any that's really interesting to me. (guess I'm just picky). But one thing I do miss from GNOME 3 is the ShellTile extension that groups windows all together and being able to resize, move, act lik a family. Maybe Cinnamon also has that but it remains to be found out.
 
-#### First Things First
+#### First Things First - The Graphics Driver
 Ironically, I don't even need to configure the graphic driver anymore. I guess that's the beauty of Linux Mint's hardware compatibility.
+
+***UPDATE***
+
+After upgrading the kernel from 4.8 to 4.10, the magic of mouveau on Linux Mint doesn't hold anymore. Therefore, I assume the problem is not with Ubuntu itself but with kernels newer than 4.8. Anyway, just go through the NVIDIA driver installation again should solve the problem. 
+
+#### Install Network Adapter RTL8822be Driver
+[Update Kernel If Necessory]({{site.url}}{% post_url 2017-10-22-ubuntu-setup %}), kernel 4.13 yields compilation errors so use 4.10 or blew for now. Then: 
+{% highlight shell linenos %}
+sudo apt update
+sudo apt install git
+git clone https://github.com/rtlwifi-linux/rtlwifi-next
+cd rtlwifi-next
+make
+sudo make install
+sudo modprobe rtl8822be
+{% endhighlight %}
 
 #### Vim Fuzzy Finder
 Definitely a life saver. Recommended without another thought. Has to be there on all my Linux setup. 
@@ -30,7 +46,7 @@ The setup should be fairly easy under Linux, just unzip and copy to home directo
 
 The directory to put the folders is under ```C:\Users\[Windows_User]\AppData\Local\lxss\home\[Linux_User]```
 
-I had a hard time finding the directory under my machine I don't know why, but with the help of [Everything](https://www.voidtools.com/){:target="_blank"} it's much easier to locate almost any file in your machine. 
+I had a hard time finding the directory under my machine I don't know why, but with the help of [Everything](https://www.voidtools.com/){:target="_blank"}, it's much easier to locate almost any file on your machine. 
 
 #### Chinese Character Fonts Setting
 Turns out the support for Chinese character is not perfect under Linux Mint. One font I found quite eyecandy is [Overpass](http://overpassfont.org/){:target="_blank"}, an open source project. There are a couple of extra settings to bypass the fonts set by the system or the theme.
@@ -66,7 +82,7 @@ Then excute the following, reboot or not.
 sudo locale-gen
 ```
 
-#### Chinese Input Double Icons
+#### Chinese Input Double Icons Removal
 After installing SogouPinyin on Linux it shows two frames while typing, simply kill fcitx-qimpanel and add it to system startup to kill. 
 ``` shell
 ps -ef | grep fcitx-qimpanel
@@ -82,3 +98,15 @@ Assuming you have the .bundle file downloaded.
 chmod a+x VMware-Workstation-Full-14.0.0-6661328.x86_64.bundle
 sudo ./VMware-Workstation-Full-14.0.0-6661328.x86_64.bundle
 ```
+
+#### Set Clock Time on Dual-Boot Systems
+If you're dual-booting Linux Mint 18 and Windows 10, you may find that changing time in one system affects the other and the two systems can't display the same time.
+
+This happens as Linux Mint 18 interprets the hardware clock or real time clock (RTC) in universal time (UTC) by default while Windows 10 maintains the clock in local time.
+
+You can fix this by keeping RTC in local time in Linux Mint, same as Windows, by running a command in the terminal below.
+``` shell
+timedatectl set-local-rtc 1 --adjust-system-clock
+```
+
+Source: [Tips and Tricks for Linux Mint](https://www.techsupportalert.com/content/tips-and-tricks-linux-mint-after-installation-mint-18-cinnamon-edition.htm#Set-Clock-Time){:target="_blank"}

@@ -6,7 +6,7 @@
 title: Yi Xia
 email: yxia921@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  A simple blog to keep track of what interests me in life.
+  It’s not a bug – it’s an undocumented feature.
 url: http://geeknerd.github.io # the base hostname & protocol for your site
 
 #
@@ -67,7 +67,7 @@ owner:
   bio: "Small blog for something big."
   email: yxia921@gmail.com
   disqus-shortname: geeknerd
-  twitter: #username
+  twitter: yixia806 #username
   facebook: bao571 #username
   google:
     plus: YiXia571 #username
