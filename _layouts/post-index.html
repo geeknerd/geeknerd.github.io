@@ -2,6 +2,29 @@
 layout: default
 ---
 
+<!-- HTML elements for search -->
+<div id="search-container">
+  <input type="text" id="search-input" placeholder="search for a post..." style="display:table-cell; width:100%">
+  <ul id="results-container"></ul>
+</div>
+
+<!-- script pointing to jekyll-search.js -->
+<script src="{{ site.baseurl }}/simple-jekyll-search.min.js"></script>
+
+<!-- Configuration -->
+<script>
+SimpleJekyllSearch({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results-container'),
+  json: '/search.json',
+  searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+  noResultsText: "No post found!",
+  fuzzy: true
+})
+</script>
+
+
+
 <br/>
 {% for post in paginator.posts %}
 

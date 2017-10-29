@@ -6,7 +6,7 @@
 title: Yi Xia
 email: yxia921@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  It’s not a bug – it’s an undocumented feature.
+  Merely a quite place for some personal writings. Say hi if you want. 
 url: http://geeknerd.github.io # the base hostname & protocol for your site
 
 #
@@ -55,7 +55,6 @@ plugins:
   - jemoji
   - jekyll-seo-tag
 
-
 #
 ###################################
 # Jekyll configuration
@@ -64,7 +63,7 @@ plugins:
 owner:
   name: Yi Xia
   avatar: avatar.jpg
-  bio: "Small blog for something big."
+  bio: "It’s not a bug – it’s an undocumented feature."
   email: yxia921@gmail.com
   disqus-shortname: geeknerd
   twitter: yixia806 #username
@@ -95,6 +94,5 @@ owner:
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
-
 
 

@@ -23,7 +23,7 @@ Ironically, I don't even need to configure the graphic driver anymore. I guess t
 
 ***UPDATE***
 
-After upgrading the kernel from 4.8 to 4.10, the magic of mouveau on Linux Mint doesn't hold anymore. Therefore, I assume the problem is not with Ubuntu itself but with kernels newer than 4.8. Anyway, just go through the NVIDIA driver installation again should solve the problem. 
+After upgrading the kernel from 4.8 to 4.10, the magic of nouveau on Linux Mint doesn't hold anymore.:flushed: Therefore, I assume the problem is not with Ubuntu itself but with kernels newer than 4.8. Anyway, just go through the NVIDIA driver installation again should solve the problem. 
 
 #### Install Network Adapter RTL8822be Driver
 [Update Kernel If Necessory]({{site.url}}{% post_url 2017-10-22-ubuntu-setup %}), kernel 4.13 yields compilation errors so use 4.10 or blew for now. Then: 
@@ -136,3 +136,15 @@ timedatectl set-local-rtc 1 --adjust-system-clock
 ```
 
 Source: [Tips and Tricks for Linux Mint](https://www.techsupportalert.com/content/tips-and-tricks-linux-mint-after-installation-mint-18-cinnamon-edition.htm#Set-Clock-Time){:target="_blank"}
+
+#### Quake Drop Down Terminal
+Not a must-have, but very handy terminal by one hotkey that drops from the top of the screen. 
+
+Normally I let the local server run in Quake so I don't need to worry about it. 
+
+Comes with distro library so should be able to install by simply ```sudo apt-get install quake -y```.
+
+## Word of Advice
+As an unprofessional programmer, I still couldn't live to the bar of file naming conventions. And prices are paid. :unamused:
+
+**Never use space in file and folder name!!!** 
