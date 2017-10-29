@@ -37,6 +37,32 @@ sudo make install
 sudo modprobe rtl8822be
 {% endhighlight %}
 
+#### DNS Settings For apt-get update
+One problem I encountered was that apt-get update always failed to fetch packages whenever a new PPA was added. Even I tried to set global proxy or just terminal proxy, most of the times it doesn't work. Looks like for now getting some good entries for DNS server alternatives is a good solution for this. Here is how:  
+
+Edit file ```/etc/resolv.conf``` and add public DNS of faster speed. Google, Aliyun, or others. 
+``` shell
+nameserver 127.0.1.1
+nameserver 8.8.8.8
+nameserver 8.8.4.4  
+nameserver 114.114.114.114
+nameserver 114.114.115.115
+nameserver 223.5.5.5
+nameserver 223.6.6.6
+```
+Or add those to base file under ```/etc/resolvconf/resolv.conf.d```. 
+
+Restart service 
+``` shell
+sudo /etc/init.d/resolvconf restart
+```
+
+Alternatively, I've tried to set global proxy in Terminal by :
+``` shell
+export ALL_PROXY=socks5://127.0.0.1:1080
+```
+Sometimes works, sometimes doesn't. 
+
 #### Vim Fuzzy Finder
 Definitely a life saver. Recommended without another thought. Has to be there on all my Linux setup. 
 

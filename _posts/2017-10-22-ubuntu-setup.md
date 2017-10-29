@@ -75,6 +75,11 @@ uget + aria2 I personally is by far the fastest combination. There might be othe
 ``` shell
 sudo apt-get install uget aria2
 ```
+Then add chrome extension wrapper
+{% highlight shell linenos %}
+wget https://raw.githubusercontent.com/slgobinath/uget-chrome-wrapper/master/build/linux/install_uget_chrome_wrapper.sh
+sudo sh install_uget_chrome_wrapper.sh
+{% endhighlight %}
 
 ### Customization Tools
 **Install GNOME Shell extensions & GNOME Tweak Toos:**
