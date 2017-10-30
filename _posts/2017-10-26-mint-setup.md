@@ -66,6 +66,43 @@ export ALL_PROXY=socks5://127.0.0.1:1080
 ```
 Sometimes works, sometimes doesn't. 
 
+#### Terminal Setting
+Gnome Terminal is good enough, but I like Zsh themes better.
+
+Therefore, install Zsh, then install oh my zsh, then customize as you like .
+
+{% highlight shell linenos%}
+sudo apt-get install zsh
+# curl
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# wget
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
+# ZSH_THEME=agnoster
+# agnoster requires powerline fonts
+# clone
+git clone https://github.com/powerline/fonts.git --depth=1
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
+
+# Color Scheme is Ocean Dark from Gogh (Very Convenient)
+sudo apt-get install dconf-cli
+wget -O gogh https://git.io/vQgMr && chmod +x gogh && ./gogh && rm gogh
+# choose 97
+# or
+# wget -O xt  https://git.io/vQ9TY && chmod +x xt && ./xt && rm xt
+{% endhighlight %}
+
+Quake - Not a must-have, but very handy terminal by one hotkey that drops from the top of the screen. 
+
+Normally I let the local server run in Quake so I don't need to worry about it. 
+
+Comes with distro library so should be able to install by simply ```sudo apt-get install quake -y```.
+
 #### Vim Fuzzy Finder
 Definitely a life saver. Recommended without another thought. Has to be there on all my Linux setup. 
 
@@ -140,12 +177,6 @@ timedatectl set-local-rtc 1 --adjust-system-clock
 
 Source: [Tips and Tricks for Linux Mint](https://www.techsupportalert.com/content/tips-and-tricks-linux-mint-after-installation-mint-18-cinnamon-edition.htm#Set-Clock-Time){:target="_blank"}
 
-#### Quake Drop Down Terminal
-Not a must-have, but very handy terminal by one hotkey that drops from the top of the screen. 
-
-Normally I let the local server run in Quake so I don't need to worry about it. 
-
-Comes with distro library so should be able to install by simply ```sudo apt-get install quake -y```.
 
 ## Word of Advice
 As an unprofessional programmer, I still couldn't live to the bar of file naming conventions. And prices are paid. :unamused:
