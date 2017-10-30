@@ -14,9 +14,12 @@ Anyway, here are some of the tips during the usage of Linux Mint. Including but 
 <!--more-->
 For some of the basic setup, it's doable to refer to the setup of Ubuntu since Linux Mint is based on that. 
 
-Well Cinnamon is quite different and I thought it could be something like Gnome but looks like it used to be a fork from Gnome and then turned into its own DE. 
+Well, Cinnamon is quite different and I thought it could be something like Gnome but looks like it used to be a fork from Gnome and then turned into its own DE. 
 
 Cinnamon has intergrated most of the basic functions to control the appearance of the desktop environment and provided some of the applets to be used. So far I haven't found any that's really interesting to me. (guess I'm just picky). But one thing I do miss from GNOME 3 is the ShellTile extension that groups windows all together and being able to resize, move, act lik a family. Maybe Cinnamon also has that but it remains to be found out.
+
+*Update*  
+Cinnamon has the *snap* Windows function that basically reserves a place for one window and maximize the other to the rest. :confused: Not what I prefer but works great. 
 
 #### First Things First - The Graphics Driver
 Ironically, I don't even need to configure the graphic driver anymore. I guess that's the beauty of Linux Mint's hardware compatibility.
