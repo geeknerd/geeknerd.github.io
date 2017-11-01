@@ -7,6 +7,9 @@ pinned: true
 tags: [Linux]
 ---
 
+* TOC
+{:toc}
+
 As famous as it's own reputation, Ubuntu's "Internal Error Occured" is really driving me crazy lately and I decided to take a look into a more novice-friendly linux distro - Linux Mint, ranked No.1 in Distro Watch. Apprently, I should've checked this out earlier in my life before all the headache. 
 
 Anyway, here are some of the tips during the usage of Linux Mint. Including but not limited to some of the useful softwares for Linux I found worth recommending. 
@@ -113,6 +116,53 @@ The setup should be fairly easy under Linux, just unzip and copy to home directo
 The directory to put the folders is under ```C:\Users\[Windows_User]\AppData\Local\lxss\home\[Linux_User]```
 
 I had a hard time finding the directory under my machine I don't know why, but with the help of [Everything](https://www.voidtools.com/){:target="_blank"}, it's much easier to locate almost any file on your machine. 
+
+#### Mapping Mouse to Keystroke
+Since there is no driver for Logitech and my Performance MX has some nice features I really want to realize in Linux, button mapping seems necessary. 
+
+Although there are several implementations that could accomplish keyboard mapping to mouse buttongs but ```xbindkeys``` seems to be the most doable one. 
+
+Some of the packages you need:
+``` shell
+sudo apt-get install xautomation x11-utils xbindkeys
+```
+* ```xbindkeys``` - main program with config options
+* ```xautomation``` - provide command "xte"
+* ```x11-utils``` - provide command "xev" for ```xbindkeys```, capture button numbers from input.
+
+First, find the button to be configured:
+``` shell
+xev | grep button
+```
+My output:
+``` shell
+state 0x10, button 10, same_screen YES
+state 0x110, button 10, same_screen YES
+```
+*Pre-configured keys will not show up in the result*
+
+Create ```.xbindkeysrc``` file in home directory to map keys. Should be self explanatory. 
+{% highlight shell linenos%}
+###########################
+# xbindkeys configuration #
+###########################
+
+# CTRL+W
+ "xte 'keydown Control_L' 'key W' 'keyup Control_L'"
+  b:9
+
+# Scale
+ "xte 'keydown Control_L' 'keydown Alt_L' 'key Down' 'keyup Alt_L' 'keyup Control_L'"
+  b:10
+
+# Terminal
+ "xte 'keydown Control_L' 'keydown Alt_L' 'key T' 'keyup Alt_L' 'keyup Control_L'"
+  b:13
+
+##################################
+# End of xbindkeys configuration #
+##################################
+{% endhighlight %}
 
 #### Chinese Character Fonts Setting
 Turns out the support for Chinese character is not perfect under Linux Mint. One font I found quite eyecandy is [Overpass](http://overpassfont.org/){:target="_blank"}, an open source project. There are a couple of extra settings to bypass the fonts set by the system or the theme.
