@@ -196,7 +196,9 @@ zh_TW.UTF-8 UTF-8
 Then excute the following, reboot or not. 
 ``` shell
 sudo locale-gen
-```
+```  
+  
+Assuming fonts are downloaded. Copy to ```/usr/share/fonts/``` then do ```fc-cache -fv``` to refresh fonts. 
 
 #### Chinese Input Double Icons Removal
 After installing SogouPinyin on Linux it shows two frames while typing, simply kill fcitx-qimpanel and add it to system startup to kill. 
@@ -213,6 +215,11 @@ Assuming you have the .bundle file downloaded.
 ``` shell
 chmod a+x VMware-Workstation-Full-14.0.0-6661328.x86_64.bundle
 sudo ./VMware-Workstation-Full-14.0.0-6661328.x86_64.bundle
+```
+
+#### Gnome-open Directory
+``` shell
+sudo apt-get install libgnome2-0
 ```
 
 #### Set Clock Time on Dual-Boot Systems
