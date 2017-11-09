@@ -1,5 +1,4 @@
 - name: github pages
-  descr: "Created and maintaining a github page based on an existing Jekyll template."
+  descr: "Created and maintaining a github page based on Jekyll."
   image: None
   website: http://geeknerd.github.io
-  file: /assets/geeknerd.github.io.zip

@@ -47,7 +47,7 @@ sudo modprobe rtl8822be
 One problem I encountered was that apt-get update always failed to fetch packages whenever a new PPA was added. Even I tried to set global proxy or just terminal proxy, most of the times it doesn't work. Looks like for now getting some good entries for DNS server alternatives is a good solution for this. Here is how:  
 
 Edit file ```/etc/resolv.conf``` and add public DNS of faster speed. Google, Aliyun, or others. 
-``` shell
+{% highlight shell%}
 nameserver 127.0.1.1
 nameserver 8.8.8.8
 nameserver 8.8.4.4  
@@ -55,18 +55,18 @@ nameserver 114.114.114.114
 nameserver 114.114.115.115
 nameserver 223.5.5.5
 nameserver 223.6.6.6
-```
+{% endhighlight %}
 Or add those to base file under ```/etc/resolvconf/resolv.conf.d```. 
 
 Restart service 
-``` shell
+{% highlight shell%}
 sudo /etc/init.d/resolvconf restart
-```
+{% endhighlight %}
 
 Alternatively, I've tried to set global proxy in Terminal by :
-``` shell
+{% highlight shell%}
 export ALL_PROXY=socks5://127.0.0.1:1080
-```
+{% endhighlight %}
 Sometimes works, sometimes doesn't. 
 
 #### Terminal Setting
@@ -104,7 +104,7 @@ Quake - Not a must-have, but very handy terminal by one hotkey that drops from t
 
 Normally I let the local server run in Quake so I don't need to worry about it. 
 
-Comes with distro library so should be able to install by simply ```sudo apt-get install quake -y```.
+Comes with distro library so should be able to install by simply ```sudo apt-get install guake -y```.
 
 #### Vim Fuzzy Finder
 Definitely a life saver. Recommended without another thought. Has to be there on all my Linux setup. 
@@ -123,22 +123,22 @@ Since there is no driver for Logitech and my Performance MX has some nice featur
 Although there are several implementations that could accomplish keyboard mapping to mouse buttongs but ```xbindkeys``` seems to be the most doable one. 
 
 Some of the packages you need:
-``` shell
+{% highlight shell%}
 sudo apt-get install xautomation x11-utils xbindkeys
-```
+{% endhighlight %}
 * ```xbindkeys``` - main program with config options
 * ```xautomation``` - provide command "xte"
 * ```x11-utils``` - provide command "xev" for ```xbindkeys```, capture button numbers from input.
 
 First, find the button to be configured:
-``` shell
+{% highlight shell%}
 xev | grep button
-```
+{% endhighlight %}
 My output:
-``` shell
+{% highlight shell%}
 state 0x10, button 10, same_screen YES
 state 0x110, button 10, same_screen YES
-```
+{% endhighlight %}
 *Pre-configured keys will not show up in the result*
 
 Create ```.xbindkeysrc``` file in home directory to map keys. Should be self explanatory. 
@@ -167,13 +167,13 @@ Create ```.xbindkeysrc``` file in home directory to map keys. Should be self exp
 #### Chinese Character Fonts Setting
 Turns out the support for Chinese character is not perfect under Linux Mint. One font I found quite eyecandy is [Overpass](http://overpassfont.org/){:target="_blank"}, an open source project. There are a couple of extra settings to bypass the fonts set by the system or the theme.
 
-``` shell
+{% highlight shell%}
 sudo apt-get install language-selector-common
-``` 
+{% endhighlight %} 
 Make sure kate is installed then:
-``` shell
+{% highlight shell%}
 sudo kate /var/lib/locales/supported.d/zh-hans
-```
+{% endhighlight %}
 Add the following to fully support Chinese.
 {% highlight shell linenos %}
 {% raw %}
@@ -194,33 +194,42 @@ zh_TW.UTF-8 UTF-8
 {% endhighlight %}
 
 Then excute the following, reboot or not. 
-``` shell
+{% highlight shell%}
 sudo locale-gen
-```  
+{% endhighlight %}  
   
 Assuming fonts are downloaded. Copy to ```/usr/share/fonts/``` then do ```fc-cache -fv``` to refresh fonts. 
 
 #### Chinese Input Double Icons Removal
 After installing SogouPinyin on Linux it shows two frames while typing, simply kill fcitx-qimpanel and add it to system startup to kill. 
-``` shell
+{% highlight shell%}
 ps -ef | grep fcitx-qimpanel
 sudo kill -9 [对应的pid]
 sudo vim /etc/rc.local
 # add before exit 0
 /bin/ps -ef | grep fcitx-qimpanel | grep -v grep | awk '{print $2}' | xargs kill -9
-```
+{% endhighlight %}
 
 #### Install VMware
 Assuming you have the .bundle file downloaded.
-``` shell
+{% highlight shell%}
 chmod a+x VMware-Workstation-Full-14.0.0-6661328.x86_64.bundle
 sudo ./VMware-Workstation-Full-14.0.0-6661328.x86_64.bundle
-```
+{% endhighlight %}
 
 #### Gnome-open Directory
-``` shell
+{% highlight shell%}
 sudo apt-get install libgnome2-0
-```
+{% endhighlight %}
+
+#### Install Java 9
+Should be self-explanatory: 
+{% highlight shell linenos%}
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt update
+sudo apt install oracle-java9-installer
+sudo apt install oracle-java8-set-default
+{% endhighlight %}
 
 #### Set Clock Time on Dual-Boot Systems
 If you're dual-booting Linux Mint 18 and Windows 10, you may find that changing time in one system affects the other and the two systems can't display the same time.
@@ -228,9 +237,9 @@ If you're dual-booting Linux Mint 18 and Windows 10, you may find that changing 
 This happens as Linux Mint 18 interprets the hardware clock or real time clock (RTC) in universal time (UTC) by default while Windows 10 maintains the clock in local time.
 
 You can fix this by keeping RTC in local time in Linux Mint, same as Windows, by running a command in the terminal below.
-``` shell
+{% highlight shell%}
 timedatectl set-local-rtc 1 --adjust-system-clock
-```
+{% endhighlight %}
 
 Source: [Tips and Tricks for Linux Mint](https://www.techsupportalert.com/content/tips-and-tricks-linux-mint-after-installation-mint-18-cinnamon-edition.htm#Set-Clock-Time){:target="_blank"}
 
