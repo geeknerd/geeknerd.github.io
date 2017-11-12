@@ -46,15 +46,14 @@ sudo modprobe rtl8822be
 #### DNS Settings For apt-get update
 One problem I encountered was that apt-get update always failed to fetch packages whenever a new PPA was added. Even I tried to set global proxy or just terminal proxy, most of the times it doesn't work. Looks like for now getting some good entries for DNS server alternatives is a good solution for this. Here is how:  
 
-Edit file ```/etc/resolv.conf``` and add public DNS of faster speed. Google, Aliyun, or others. 
-{% highlight shell%}
-nameserver 127.0.1.1
+Edit file ```/etc/resolvconf/resolv.conf.d/tail``` and add public DNS of faster speed. Google, Aliyun, or others. 
+{% highlight shell linenos%}
+nameserver 223.5.5.5
+nameserver 223.6.6.6
 nameserver 8.8.8.8
 nameserver 8.8.4.4  
 nameserver 114.114.114.114
 nameserver 114.114.115.115
-nameserver 223.5.5.5
-nameserver 223.6.6.6
 {% endhighlight %}
 Or add those to base file under ```/etc/resolvconf/resolv.conf.d```. 
 
@@ -202,7 +201,7 @@ Assuming fonts are downloaded. Copy to ```/usr/share/fonts/``` then do ```fc-cac
 
 #### Chinese Input Double Icons Removal
 After installing SogouPinyin on Linux it shows two frames while typing, simply kill fcitx-qimpanel and add it to system startup to kill. 
-{% highlight shell%}
+{% highlight shell linenos%}
 ps -ef | grep fcitx-qimpanel
 sudo kill -9 [对应的pid]
 sudo vim /etc/rc.local
