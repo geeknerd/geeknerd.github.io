@@ -203,7 +203,7 @@ Assuming fonts are downloaded. Copy to ```/usr/share/fonts/``` then do ```fc-cac
 After installing SogouPinyin on Linux it shows two frames while typing, simply kill fcitx-qimpanel and add it to system startup to kill. 
 {% highlight shell linenos%}
 ps -ef | grep fcitx-qimpanel
-sudo kill -9 [对应的pid]
+sudo kill -9 [corresponding pid]
 sudo vim /etc/rc.local
 # add before exit 0
 /bin/ps -ef | grep fcitx-qimpanel | grep -v grep | awk '{print $2}' | xargs kill -9

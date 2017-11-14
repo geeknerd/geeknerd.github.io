@@ -82,7 +82,7 @@ sudo sh install_uget_chrome_wrapper.sh
 {% endhighlight %}
 
 ### Customization Tools
-**Install GNOME Shell extensions & GNOME Tweak Toos:**
+**Install GNOME Shell extensions & GNOME Tweak Tools:**
 ``` shell
 sudo apt-get install gnome-shell-extensions gnome-tweak-tool
 ```
