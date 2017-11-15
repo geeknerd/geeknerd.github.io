@@ -230,6 +230,19 @@ sudo apt install oracle-java9-installer
 sudo apt install oracle-java8-set-default
 {% endhighlight %}
 
+If you have the tar.gz file downloaded from Oracle website, ```sudo``` copy it to ```/usr/lib/``` directory unzip and set path. 
+{% highlight shell linenos %}
+sudo cp jdk-9.0.1_linux-x64_bin.tar.gz /usr/lib/
+sudo tar -xvzf jdk-9.0.1_linux-x64_bin.tar.gz
+export JAVA_HOME=/usr/lib/jdk-9.0.1
+export PATH=$PATH:/$JAVA_HOME/bin/
+{% endhighlight %}
+
+Check if successful by:
+{% highlight shell %}
+java --version
+{% endhighlight %}
+
 #### Set Clock Time on Dual-Boot Systems
 If you're dual-booting Linux Mint 18 and Windows 10, you may find that changing time in one system affects the other and the two systems can't display the same time.
 
