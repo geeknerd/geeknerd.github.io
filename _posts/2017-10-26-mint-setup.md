@@ -74,7 +74,7 @@ Gnome Terminal is good enough, but I like Zsh themes better.
 Therefore, install Zsh, then install oh my zsh, then customize as you like .
 
 {% highlight shell linenos%}
-sudo apt-get install zsh
+sudo apt install zsh
 # curl
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 # wget
