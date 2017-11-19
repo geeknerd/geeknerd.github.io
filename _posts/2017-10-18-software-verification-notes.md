@@ -59,3 +59,4 @@ Because the program is either proved to be meet the post condition or it does no
 Introduces a *loop variant*, defined on a *well-founded ordering* < on some domain set D. 
 
 ### Predicate transformer
+Reducing the problem of verifying a Hoare triple to the problem of proving a first-order formula. 
