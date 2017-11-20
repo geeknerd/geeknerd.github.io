@@ -243,6 +243,17 @@ Check if successful by:
 java --version
 {% endhighlight %}
 
+
+#### Install Android Studio
+First, get the package from Google. Unzip it into a directory, anyone should work.  
+Then:
+{% highlight shell linenos %}
+sudo mv ~/android-studio /usr/local/
+cd /usr/local/android-studio/bin
+./studio.sh
+{% endhighlight %}
+Wait for it to finish downloading additional packages and should be good to go. 
+
 #### Set Clock Time on Dual-Boot Systems
 If you're dual-booting Linux Mint 18 and Windows 10, you may find that changing time in one system affects the other and the two systems can't display the same time.
 

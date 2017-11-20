@@ -2,8 +2,8 @@
 layout: post
 title: Notes on comprehending software verification.
 excerpt: "Some not-that-well-structured notes during the study of software verification. Including pieces from various sources and mainly plays as a review and combination of the materials I went through."
-date: 2017-10-18
-modifited: 2017-10-28
+date: 2017-11-20
+modifited: 2017-11-20
 comments: true
 pinned: true
 tags: [Notes, Software Engineering]
@@ -13,7 +13,8 @@ Software verification is a new area of study to me and I feel the realm of it co
 
 <!--more-->
 
-### Hoare logic
+### Hoare logic[^1]
+[^1]:<https://en.wikipedia.org/wiki/Hoare_logic>
 **Predicate:**  
   Boolean-valued function $$P: X \to \{true, false\}$$ is called the predicate on X.  
 
@@ -43,10 +44,11 @@ Strengthen precondition / weaken postcondition  
 \\[
 \frac{ \\{P \land B \\}\ S\ \\{P\\}}{\\{P\\}\ \text{while}\ B\ \text{do}\ S\ \text{done}\ \\{ \neg B \land P\\}}
 \\]
-A proof of:  
-$$\{x ≤ 10\}$$ while $$x < 10$$ do $$x := x + 1$$ done $$\{\neg x < 10 ∧ x \leq 10\}$$ 
-is reduced to proof of : 
-$$\{x ≤ 10 ∧ x < 10\}\ x := x + 1\ \{x ≤ 10 \}$$, or simplified  
+A proof of:  
+$$\{x ≤ 10\}$$ while $$x < 10$$ do $$x := x + 1$$ done $$\{\neg x < 10 ∧ x \leq 10\}$$  
+is reduced to proof of:  
+$$\{x ≤ 10 ∧ x < 10\}\ x := x + 1\ \{x ≤ 10 \}$$,  
+or simplified  
 $$\{x < 10\}\ x := x + 1\ \{x ≤ 10\}$$. 
 
 $$\{true\}$$ **while** $$x * x \neq a$$ **do skip done** $$\{x * x = a \land true\}$$  
@@ -58,5 +60,33 @@ Because the program is either proved to be meet the post condition or it does no
 **While rule for total correctness**  
 Introduces a *loop variant*, defined on a *well-founded ordering* < on some domain set D. 
 
-### Predicate transformer
+### Predicate transformer semantics [^2]
+[^2]:<https://en.wikipedia.org/wiki/Predicate_transformer_semantics>
 Reducing the problem of verifying a Hoare triple to the problem of proving a first-order formula. 
+
+Essentially, it's producing a precondition based on a statement and postcondition. 
+
+A weaker precondition is better because it is less restrictive of the possible starting values of a program that ensure correctness. Typically, given a postcondition of a desired property of the output state, we would like to know the weakest precondition that guarantees the correctness. 
+
+Given a program $$S$$ and a postcondition $$\varphi$$, the weakest property of the input state that guarantees that $$S$$ halts in a state satisfying $$\varphi$$ is called the *weakest precondition* of $$S$$ and $$\varphi$$ and is denoted $$wp(S,\varphi)$$. [^3]
+
+[^3]:<http://www.cs.cornell.edu/courses/cs6110/2011sp/lectures/lecture18.pdf>
+
+**Assignment:**  
+$$
+\begin{align}
+wp(x:=x-5,x>10)& = x-5>10 \\
+& \Leftrightarrow x>15
+\end{align}
+$$
+
+**Sequence:**  
+$$
+\begin{align}
+wp(x:=x-5;x:=x*2,x>20)
+&= wp(x:x=5, wp(x:=x*2,x>20))\\
+&= wp(x:=x-5,x*2>20)\\
+&= (x-5)*2>20\\
+&= x>15
+\end{align}
+$$
