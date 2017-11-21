@@ -90,3 +90,16 @@ wp(x:=x-5;x:=x*2,x>20)
 &= x>15
 \end{align}
 $$
+
+**Conditional:**  
+$$
+\begin{align}
+wp(\mathbf{if}\ x<y\ \mathbf{then}\ x:=y\ \mathbf{else\ skip\ end}, x\geq y)
+&= (x<y \Rightarrow wp(x:=y, x\geq y)) \land (\neg(x<y) \Rightarrow wp(\text{skip}, x\geq y))\\
+&= (x<y \Rightarrow y\geq y) \land (\neg(x<y) \Rightarrow x\geq y)\\
+& \Leftrightarrow \mathbf{true}
+\end{align}
+$$  
+
+*Why the inference leads to a weakest precondition of **true**?*
+{: .notice}
