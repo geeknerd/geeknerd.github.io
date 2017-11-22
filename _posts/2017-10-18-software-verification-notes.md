@@ -22,7 +22,10 @@ Software verification is a new area of study to me and I feel the realm of it co
   programming paradigm that uses statements that change a program's state.  
 
 **Hoare triple $$\{P\} C \{Q\}$$**  
-  Whenever  P holds of the state before the execution of C, then Q will hold afterwards, or C does not terminate. $$\to$$ partial correctness only 
+  Whenever  P holds of the state before the execution of C, then Q will hold afterwards, or C does not terminate. $$\to$$ **partial correctness** only.
+
+On the contrary, **total correctness** guarantees program's termination so C will terminate and Q will be the final state. 
+{: .notice}
 
 **Assignment rule:** $$ \{x+1 = 43\}\ y := x + 1\ \{ y = 43 \} $$ 
 
@@ -41,9 +44,12 @@ $$\{0 ≤ x ≤ 15 \}\ \text{if}\ x < 15\ \text{then}\ x := x + 1\ \text{else}\ 
 Strengthen precondition / weaken postcondition  
 
 **While rule:**  
-\\[
-\frac{ \\{P \land B \\}\ S\ \\{P\\}}{\\{P\\}\ \text{while}\ B\ \text{do}\ S\ \text{done}\ \\{ \neg B \land P\\}}
-\\]
+$$
+\begin{align}
+\frac{ \{P \land B \}\ S\ \{P \} }{\{P\}\ \text{while}\ B\ \text{do}\ S\ \text{done}\ \{ \neg B \land P \} }
+\end{align}
+$$
+
 A proof of:  
 $$\{x ≤ 10\}$$ while $$x < 10$$ do $$x := x + 1$$ done $$\{\neg x < 10 ∧ x \leq 10\}$$  
 is reduced to proof of:  
@@ -58,7 +64,12 @@ $$\{true \land x * x \neq a\}$$ **skip** $$\{true\}$$ (skip rule and consequen
 Because the program is either proved to be meet the post condition or it does not terminate, **while rule** only provides *partial correctness*. 
 
 **While rule for total correctness**  
-Introduces a *loop variant*, defined on a *well-founded ordering* < on some domain set D. 
+Introduces a *loop variant*, defined on a *well-founded ordering* < on some domain set D.  
+$$
+\begin{align}
+\frac{< \text{is a well-founded ordering on the set}\ D, [P \land B \land t \in D \land t=z]\quad S\quad [P \land t \in D \land t<z]}{[P\land t \in D]\ \mathbf{while}\ B\ \mathbf{do}\ S\ \mathbf{done}\ [\neg B \land P \land t \in D]}
+\end{align}
+$$
 
 ### Predicate transformer semantics [^2]
 [^2]:<https://en.wikipedia.org/wiki/Predicate_transformer_semantics>
@@ -102,4 +113,9 @@ wp(\mathbf{if}\ x<y\ \mathbf{then}\ x:=y\ \mathbf{else\ skip\ end}, x\geq y)
 $$  
 
 *Why the inference leads to a weakest precondition of **true**?*
+{: .notice}
+
+**While loop:**  
+
+*Why necessary to use a loop invariant I since I stays true from the beginning to termination?*
 {: .notice}
