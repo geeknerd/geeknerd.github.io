@@ -117,5 +117,5 @@ $$
 
 **While loop:**  
 
-*Why necessary to use a loop invariant I since I stays true from the beginning to termination?*
+*Why necessary to use a loop invariant **I** since **I** stays true from the beginning to termination?*
 {: .notice}
