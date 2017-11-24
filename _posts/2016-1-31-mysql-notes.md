@@ -215,4 +215,4 @@ AS cust_info  FROM customers;
 
 *Working script*
 
-{% gist geeknerd/dade57c153f138bc840f %}
+<p><script src="https://gist.github.com/geeknerd/dade57c153f138bc840f.js"> </script></p>
