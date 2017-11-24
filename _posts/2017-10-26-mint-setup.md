@@ -93,10 +93,10 @@ rm -rf fonts
 
 # Color Scheme is Ocean Dark from Gogh (Very Convenient)
 sudo apt-get install dconf-cli
-wget -O gogh https://git.io/vQgMr && chmod +x gogh && ./gogh && rm gogh
+# wget -O gogh https://git.io/vQgMr && chmod +x gogh && ./gogh && rm gogh
 # choose 97
 # or
-# wget -O xt  https://git.io/vQ9TY && chmod +x xt && ./xt && rm xt
+wget -O xt  https://git.io/vQ9TY && chmod +x xt && ./xt && rm xt
 {% endhighlight %}
 
 Quake - Not a must-have, but very handy terminal by one hotkey that drops from the top of the screen. 
@@ -227,7 +227,7 @@ Should be self-explanatory:
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt update
 sudo apt install oracle-java9-installer
-sudo apt install oracle-java8-set-default
+sudo apt install oracle-java9-set-default
 {% endhighlight %}
 
 If you have the tar.gz file downloaded from Oracle website, ```sudo``` copy it to ```/usr/lib/``` directory unzip and set path. 
