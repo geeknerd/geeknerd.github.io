@@ -93,10 +93,10 @@ rm -rf fonts
 
 # Color Scheme is Ocean Dark from Gogh (Very Convenient)
 sudo apt-get install dconf-cli
-wget -O gogh https://git.io/vQgMr && chmod +x gogh && ./gogh && rm gogh
+# wget -O gogh https://git.io/vQgMr && chmod +x gogh && ./gogh && rm gogh
 # choose 97
 # or
-# wget -O xt  https://git.io/vQ9TY && chmod +x xt && ./xt && rm xt
+wget -O xt  https://git.io/vQ9TY && chmod +x xt && ./xt && rm xt
 {% endhighlight %}
 
 Quake - Not a must-have, but very handy terminal by one hotkey that drops from the top of the screen. 
