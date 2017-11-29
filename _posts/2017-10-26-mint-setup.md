@@ -227,7 +227,7 @@ Should be self-explanatory:
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt update
 sudo apt install oracle-java9-installer
-sudo apt install oracle-java8-set-default
+sudo apt install oracle-java9-set-default
 {% endhighlight %}
 
 If you have the tar.gz file downloaded from Oracle website, ```sudo``` copy it to ```/usr/lib/``` directory unzip and set path. 
