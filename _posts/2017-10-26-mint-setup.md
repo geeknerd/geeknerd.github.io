@@ -51,7 +51,7 @@ Edit file ```/etc/resolvconf/resolv.conf.d/tail``` and add public DNS of faster 
 nameserver 223.5.5.5
 nameserver 223.6.6.6
 nameserver 8.8.8.8
-nameserver 8.8.4.4  
+nameserver 8.8.4.4
 nameserver 114.114.114.114
 nameserver 114.114.115.115
 {% endhighlight %}
