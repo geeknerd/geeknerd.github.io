@@ -7,6 +7,8 @@ modifited: 2017-11-20
 comments: true
 pinned: true
 tags: [Notes, Software Engineering]
+image:
+  feature: software.jpg
 ---
 
 Software verification is a new area of study to me and I feel the realm of it could be deployed in a wide range of industries. Thus the overall learning process should be fun to me. 
