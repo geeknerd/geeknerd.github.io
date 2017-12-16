@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Notes on comprehending software verification.
-excerpt: "Some not-that-well-structured notes during the study of software verification. Including pieces from various sources and mainly plays as a review and combination of the materials I went through."
+title: Notes on software verification.
+excerpt: "Some not-that-well-structured notes during the study of software verification. The post includes pieces from various sources and mainly plays as a review and combination of the materials I went through."
 date: 2017-11-20
 modifited: 2017-11-20
 comments: true
@@ -114,10 +114,21 @@ wp(\mathbf{if}\ x<y\ \mathbf{then}\ x:=y\ \mathbf{else\ skip\ end}, x\geq y)
 \end{align}
 $$  
 
-*Why the inference leads to a weakest precondition of **true**?*
+**Q:** *Why the inference leads to a weakest precondition of **true**?*  
+**A:** Given the program, the postcondition will always hold. 
 {: .notice}
 
 **While loop:**  
 
 *Why necessary to use a loop invariant **I** since **I** stays true from the beginning to termination?*
 {: .notice}
+
+**Total Correctness**  
+$$
+\begin{align}
+wp(\mathbf{while}\ E\ \mathbf{do}\ S\ \mathbf{done}, R) =
+& I\\
+& \land \forall y,((E\land I) \Rightarrow wp(S,I \land x<y))[x \leftarrow y]\\
+& \land \forall y, ((\neg E \land I) \Rightarrow R)[x \leftarrow y]
+\end{align}
+$$
