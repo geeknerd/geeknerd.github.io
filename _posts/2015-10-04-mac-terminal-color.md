@@ -6,7 +6,7 @@ date: 2017-08-24
 modified: 2017-10-08
 comments: true
 pinned: true
-tags: [Mac OS X]
+tags: [MacOS]
 image:
   feature: term-icon.jpg
   credit: Ilya Pavlov

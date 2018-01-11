@@ -4,7 +4,7 @@ title: Set Up Git on Mac OS X
 date: 2015-09-22
 comments: true
 pinned: true
-tags: [Mac OS X,git]
+tags: [MacOS,git]
 ---
 
 ```1.``` First, you need to download the latest version of Git from [here](http://git-scm.com/downloads).

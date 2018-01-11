@@ -12,3 +12,19 @@ tags: [MacOS, Notes]
 Best plugins to solve the Chinese random character issues. Some uses GBK Encoding Support, which also does the job the Codecs33 is the root of it.
 
 I don't have the problem of typing in Chinese characters, maybe I had a work-around before but can't remember it now. Haven't tried other languages but should be pretty similar and I think Sublime Text comes with a lot of language supports. 
+
+#### Markdown Editing
+Most people might not need this but if you're editing markdown files locally, especially the ones from Github, you're going to need this package for great markdown highlighting. 
+
+The package itself defaults the settings to GFM, which is the GitHub flavored Markdown, and in my user settings I set it pretty close to what ther other files would look, left-aligned, line numbers, black colors, etc. 
+{% highlight shell linenos %}
+{
+    "color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+    "wrap_width": 0,
+    "draw_centered": false,
+    "line_padding_top": 2,
+    "line_padding_bottom": 2,
+    "line_numbers": true,
+    "tab_size": 4
+}
+{% endhighlight %}
