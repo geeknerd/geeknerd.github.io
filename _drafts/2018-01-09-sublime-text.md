@@ -28,3 +28,35 @@ The package itself defaults the settings to GFM, which is the GitHub flavored Ma
     "tab_size": 4
 }
 {% endhighlight %}
+
+Also, it'll be very useful to have ```tab``` move to the end of the quotes. Put the following keybinding to user defined. 
+{% highlight shell linenos %}
+[
+    // Move out of common paired characters () and [] with `Tab`
+    {
+        "keys": ["tab"],
+        "command": "move",
+        "args": {"by": "characters", "forward": true},
+        "context": [
+            // Check if next char matches (followed by anything)
+            { "key": "following_text", "operator": "regex_match", "operand": "(:?`|\\)|\\]|\\}).*", "match_all": true },
+            // ...and that there is a paid character before it on the same
+            // line. This lets you `tab` to Indent at lines with single ]s
+            // still, like in a JSOn file
+            { "key": "preceding_text", "operator": "regex_contains", "operand": "(:?`|\\(|\\[|\\{)", "match_all": true }
+        ]
+    },
+
+    // Move out of single and double quotes with `Tab`
+    {
+        "keys": ["tab"],
+        "command": "move",
+        "args": {"by": "characters", "forward": true},
+        "context": [
+            { "key": "following_text", "operator": "regex_match", "operand": "(?:\"|').*", "match_all": true },
+
+            { "key": "preceding_text", "operator": "regex_contains", "operand": "(?:\"|')", "match_all": true }
+        ]
+    }
+]
+{% endhighlight %}
