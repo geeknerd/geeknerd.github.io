@@ -23,3 +23,9 @@ I've tried a few virtual machine on Mac and Parallels is by far the best in my o
 Starting from Sierra Apple has hidden the option in Security & Privacy to allow apps from anywhere by default. Just run this command in terminal and it should be back again. ```sudo spctl --master-disable```
 
 #### Show/Hide Hidden Files
+
+#### [PopClip](http://pilotmoon.com/popclip/)
+Instantly copy/paste from a pop-up window. However, it is way powerful than that. With all these extentions to be added onto the little bar above your text, you can see the improvement in your efficiency. Try it and you'll love it. Must have for me. 
+
+#### [Cardhop](https://flexibits.com/cardhop)
+Actually just found this sleek app while searching for new interesting extentions for PopClip. Wow! I should've installed it much much much earlier. This is like the perfect alternatives or add-on to the Mac Contacts app and believe it or not, you will get the AI feel while using this app. 
