@@ -29,3 +29,8 @@ Instantly copy/paste from a pop-up window. However, it is way powerful than that
 
 #### [Cardhop](https://flexibits.com/cardhop)
 Actually just found this sleek app while searching for new interesting extentions for PopClip. Wow! I should've installed it much much much earlier. This is like the perfect alternatives or add-on to the Mac Contacts app and believe it or not, you will get the AI feel while using this app. 
+
+#### [iTerm2](https://www.iterm2.com/)
+Best terminal alternative for Terminal.app. Actually has become my default terminal on Mac now.  
+I use BetterTouchTool for windows snapping and the default of iTerm has a gap between two windows. The way to change it so there is no gap:  
+Preferences - Advanced - Windows - Terminal Windows resize smoothly - Yes
