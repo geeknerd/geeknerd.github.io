@@ -1,3 +1,8 @@
+- name: Ph.D University of Nebraska Lincoln
+  link: http:cse.unl.edu/
+  date: 2018 - <i class="fa fa-clock-o" aria-hidden="true" title="Until Now"></i>
+  #descr: <br> (expected graduation in 2022)
+
 - name: M.S. University of Nebraska Lincoln
   link: http://cse.unl.edu/
   date: 2013 - 2015 #<i class="fa fa-clock-o" aria-hidden="true" title="Until Now"></i>
