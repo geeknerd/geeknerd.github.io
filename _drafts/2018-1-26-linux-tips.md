@@ -22,3 +22,8 @@ There is another way using ```echo``` command.
 {% highlight shell %}
 echo */ | wc
 {% endhighlight %}
+
+To search for empty folders in a specific directory, use the ```find``` command with arguments like:
+{% highlight shell %}
+find . -type d -empty
+{% endhighlight %}
