@@ -27,3 +27,7 @@ To search for empty folders in a specific directory, use the ```find``` command 
 {% highlight shell %}
 find . -type d -empty
 {% endhighlight %}
+To list all the directories under a certain directory:
+{% highlight shell %}
+ls -d */
+{% endhighlight %}
