@@ -31,3 +31,8 @@ To list all the directories under a certain directory:
 {% highlight shell %}
 ls -d */
 {% endhighlight %}
+
+To find all non-empty directory under the current directory, excluding the parent ```.```
+{% highlight shell %}
+find . -mindepth 1 -type d -not -empty
+{% endhighlight %}
