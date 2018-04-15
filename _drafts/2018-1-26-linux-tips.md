@@ -13,11 +13,13 @@ This will list all non-hidden entries and extract out directories and do a count
 {% highlight shell %}
 ls -l | grep "^d" | wc -l
 {% endhighlight %}
+
 Or use a simpler version:
 {% highlight shell %}
 ls -l | grep -c ^d
 ls -l | grep -c ^- #this counts the files without directories
 {% endhighlight %}
+
 There is another way using ```echo``` command.
 {% highlight shell %}
 echo */ | wc
@@ -27,6 +29,7 @@ To search for empty folders in a specific directory, use the ```find``` command 
 {% highlight shell %}
 find . -type d -empty
 {% endhighlight %}
+
 To list all the directories under a certain directory:
 {% highlight shell %}
 ls -d */
@@ -34,5 +37,5 @@ ls -d */
 
 To find all non-empty directory under the current directory, excluding the parent ```.```
 {% highlight shell %}
-find . -mindepth 1 -type d -not -empty
+find . -mindepth 1 -type d -not -empty -printf '%P\n' | sort
 {% endhighlight %}
