@@ -39,3 +39,5 @@ To find all non-empty directory under the current directory, excluding the paren
 {% highlight shell %}
 find . -mindepth 1 -type d -not -empty -printf '%P\n' | sort
 {% endhighlight %}
+
+
