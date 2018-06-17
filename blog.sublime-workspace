@@ -171,6 +171,17 @@
 	},
 	"buffers":
 	[
+		{
+			"contents": "---\nlayout: post\ntitle: Vim Accumulated Tips\nexcerpt: \"A great list of some of the vim commands that could be really helpful to light-to-heavy Vim users everyday. Navigation and basic commands will not be listed here under the assumptions that they are elementary to survive in a entry-to-high level learning curve.\"\ndate: 2018-04-22\nmodifited: 2018-04-22\ncomments: true\npinned: true\ntags: [Linux]\n---\n##### Some command mode tips to better focus fingers on the keyboard.\nWhen there is a physical keyboard around, I prefer to use ```ESC``` to get out of insert mode. However, the new Macbook Pro adopts a touchbar with ```ESC``` in it and it is not fun to use under any circumstance. Luckily, it turns out that savior to this tragedy is another combination with one extra keystroke. Believe me, it is definitely worth it for the adaptation curve. \n~~~ shell\ncontrol + [ # faster way to exit insert mode\n# not prefered but still works\ncontrol + c # force quit all commands including buffered\n~~~\n##### Search and replace text in selection\nFor example there is a line\n~~~~ shell\nmusic amuse fuse refuse\n~~~~\nTo replace ```us``` with ```az```, the command would be \n~~~ SHELL\n:s/\\%Vus/az/g\n~~~\nThe ```\\%V``` specifies to search and replace in visual mode not entire file.\n#### Jump to a certain line\nMost often I use *number*+G to jump to a certain line in Vim. However, it is possible to jump to a line from file opening, which is most useful when debugging and file and found a breakpoint. There are multiple ways to do it but the simpliest are:\n~~~ shell\n# goto line 21\nvim file.xx +21\n# orhfdskfgfasffddfsafdfd\nvim file.xx -c \":21\"\n~~~",
+			"file": "_posts/2018-4-22-vim-tips.md",
+			"file_size": 1615,
+			"file_write_time": 131737344922369528,
+			"settings":
+			{
+				"buffer_size": 1636,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -244,9 +255,29 @@
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "inst",
+		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Disable Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"lis",
+				"Permute Lines: Shuffle"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
 			[
 				"inst",
 				"Package Control: Install Package"
@@ -304,10 +335,13 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/yixia/geeknerd.github.io"
+		"/Users/yixia/geeknerd.github.io",
+		"/Users/yixia/geeknerd.github.io/_posts"
 	],
 	"file_history":
 	[
+		"/Users/yixia/geeknerd.github.io/_posts/2018-4-22-vim-tips.md",
+		"/Users/yixia/geeknerd.github.io/_posts/2018-01-09-sublime-text.md",
 		"/Users/yixia/Downloads/ddd/团子系列/团子系列/毛衣少女/sanjiery_tumblr_com02.jpg",
 		"/Users/yixia/Documents/python_work/ch7.py",
 		"/Users/yixia/Documents/python_work/ch5.py",
@@ -433,9 +467,7 @@
 		"/Users/yixia/Documents/2018_Spring/155E/CSCE155-C-Lab05/physicsCalc.c",
 		"/Users/yixia/Documents/2018_Spring/155E/CSCE155-C-Lab05/sine.c",
 		"/Users/yixia/Documents/2018_Spring/155E/CSCE155-C-Lab06/florist.c",
-		"/Users/yixia/Documents/2018_Spring/155E/CSCE155-C-Lab12/drive.c",
-		"/Users/yixia/Documents/2018_Spring/155E/hw4/caugustyn/array_utils.c",
-		"/Users/yixia/Documents/2018_Spring/155E/hw4/caugustyn/matrix_utils.c"
+		"/Users/yixia/Documents/2018_Spring/155E/CSCE155-C-Lab12/drive.c"
 	],
 	"find":
 	{
@@ -470,8 +502,39 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "_posts/2018-4-22-vim-tips.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1636,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1065,
+								1065
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": true,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/MarkdownEditing/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -564,7 +627,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 161.0,
+	"side_bar_width": 253.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
