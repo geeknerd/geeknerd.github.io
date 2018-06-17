@@ -62,3 +62,5 @@ Also, it'll be very useful to have ```tab``` move to the end of the quotes. Put 
 {% endhighlight %}
 #### Anaconda + Python 3
 There are tons of Python packages that utilize ST3 into a fully customizable Python IDE to use. I tried a few of them but most of the others failed my esthetic expectation with unnecessary coloring of the codes and weird icons. But definitely try those out if fancy is your style. I will stick with these two for Python coding and developing and so far they have met all my needs. 
+#### LaTeX-cwl + LaTeXTools
+Technically, I would prefer latex editing in Vim or dedicated LaTeX editors like texmaker. However, Texmaker is starting to consume too much of my computer resource, although adequate, and I tried ST3 for Latex editing and it turned out to be just as convenient. Also, half the credit needs to go to PDF Expert for Mac which automatically reloads any edited PDFs, so ST3 only need to build the file and PDF Expert will be able to refresh it. 
