@@ -20,3 +20,4 @@ $$p(Y|X)$$: Posterior Probability.
 $$p(Y)$$: Prior Probability.  
 $$p(X|Y)$$: Likelihood.  
 $$p(X)$$: Evidence. Also the **normalization constant**: sum of the likelihood of X for each class Y.  
+Building joint probability distributions depends on the number of variables $$N$$ as well as the number of states $$D$$, resulting a complexity of $$O(D^N)$$. Instead we could use fewer parameters by making **unconditional independence** assumptions (rare) or mediate the variable influences through 3rd random variable to achieve **conditional independence**.
