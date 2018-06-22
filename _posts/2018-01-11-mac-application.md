@@ -4,7 +4,7 @@ title: Incomplete List of Softwares Recommended on Mac OS
 excerpt: "I tend to re-install my system on a regular basis, and honestly I don't know why. Most of the time I'm just hoping it'll clean up the system garbage and run faster. Anyway, to keep a good track of the useful softwares on a Mac here is a list for them. Also includes some tips for MacOS that I found quite useful.
 UPDATES: Have not re-installed my system for half a year now. yay!"
 date: 2018-01-11
-modifited: 2018-01-11
+modifited: 2018-06-18                       
 comments: true
 pinned: true
 tags: [MacOS]
