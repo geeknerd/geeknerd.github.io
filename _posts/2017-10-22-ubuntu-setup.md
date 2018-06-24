@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The way I setup my Linux (Ubuntu 17.04-17.10)
+title: Ubuntu 17.xx - Kernel, Network, GNOME and more
 date: 2017-10-22
 comments: true
 pinned: true

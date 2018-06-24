@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The way I setup my Linux (Linux Mint)
+title: Linux Mint - DNS, Terminal, Drivers and more.
 date: 2017-10-26
 comments: true
 pinned: true
