@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Notes on Introduction to Machine Learning.
+title: Introduction to Machine Learning.
 excerpt: ""
 date: 2018-06-20
 modifited: 2018-06-20

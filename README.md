@@ -1,4 +1,4 @@
 # Yi's Blog
 
-**[geeknerd.github.io](http://geeknerd.github.io/)** is based on **[Leonids](https://github.com/renyuanz/leonids)** 
+**[geeknerd.me](http://geeknerd.me)** is based on **[Leonids](https://github.com/renyuanz/leonids)** 
 
