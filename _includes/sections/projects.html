@@ -3,7 +3,7 @@
 <div class="archive">
   <div class="timeline" id="timeline">
     {% for project in site.data.index.projects %}
-        <div class="archive-title"><div class="archive-year"><strong>{{ project.name }}</strong> </div></div>
+        <div class="archive-title"><div class="archive-year"><strong>{{ project.name }}</strong> - <strong>{{ project.date }}</strong></div></div>
         <ul>
             <li><p>{{ project.descr }}</p></li>
 
