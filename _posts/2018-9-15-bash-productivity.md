@@ -39,12 +39,6 @@ To find all non-empty directory under the current directory, excluding the paren
 find . -mindepth 1 -type d -not -empty -printf '%P\n' | sort
 {% endhighlight %}
 
-To find files with certain sizes (larger/smaller than)
-{% highlight shell %}
-find . -maxdepth 1 -type f -name "*.csv" -size -11M  # +11M for greater than
-# M for megabytes, G for Gigabytes, k for kilobytes, etc. 
-{% endhighlight %}
-
 ##### How to know your commands better. 
 Navigation in a local environment with a lot of ```.bashrc``` options might be easy. However, it is not that accessible in most cases where you need to work on a remote Linux environment. How to navigate on the black-green screen largely categorizes your productivity level. Here are some commands that are either well-known or well-used. 
 {% highlight shell %}
@@ -72,3 +66,11 @@ ctrl + n  # next command in history
 ctrl + l  # clear the screen
 ctrl + s  # stops the output to the screen
 {% endhighlight %}
+
+##### More on file search and listing
+```head``` can be used to display the first part of an output. use ```-20``` to specify how many lines to be displayed. For example:
+{% highlight shell %}
+ls -lth *.csv | head -20 # list first 20 files sorted by time in human-readable fashion. 
+{% endhighlight %}
+
+##### One-Liners
