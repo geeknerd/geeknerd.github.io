@@ -24,7 +24,7 @@ I've tried a few virtual machine on Mac and Parallels is by far the best in my o
 Starting from Sierra Apple has hidden the option in Security & Privacy to allow apps from anywhere by default. Just run this command in terminal and it should be back again. ```sudo spctl --master-disable```
 
 #### Show/Hide Hidden Files
-The easiest way to do it since 10.13 I believe is ```CMD+SHIFT+.```
+The easiest way to do it since 10.13 I believe is ```command + shift + .```
 
 #### [PopClip](http://pilotmoon.com/popclip/)
 Instantly copy/paste from a pop-up window. However, it is way powerful than that. With all these extentions to be added onto the little bar above your text, you can see the improvement in your efficiency. Some of the features I used the most are search with Google/Scholar, capitalize and paste plain text, etc. 
@@ -39,3 +39,6 @@ Preferences - Advanced - Windows - Terminal Windows resize smoothly - Yes
 
 #### [Alfred 3](https://www.alfredapp.com/)
 Personal favorite of Spotlight replacement. Of course, I miss the time when [Flashlight](http://flashlight.nateparrott.com/) is still functioning. To fully utilize Alfred 3, the powerpack is highly recommended and a must-have. There are tons of workflows out online to boost productivity. Although some of them require more keystroke than spotlight but overall the file indexing and content based search are better and more accurate. 
+
+#### [TermHere](https://hbang.ws/apps/termhere/)
+Haven't seen a lot of people using it but if you use terminal a lot everyday and navigate through files using Finder + Alfred, you are going to love this tool. Bear in mind that you can select a file and do term here, it has to be a folder location. 

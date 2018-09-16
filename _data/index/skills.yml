@@ -2,5 +2,5 @@
 
 label: Technical Skills
 id : cs
-aspects: Motivation, Git, Java, HTML/CSS, Testing, Software Engineering, Network, Linux, MySQL
-percentage: 100, 55, 90, 40, 50, 70, 60, 75, 80
+aspects: Motivation, Git, Java, C, Python, R, Software Engineering, Linux, Machine Learning, MAS
+percentage: 100, 55, 90, 60, 40, 50, 70, 75, 60, 80
